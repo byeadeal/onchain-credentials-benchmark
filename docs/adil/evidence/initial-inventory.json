@@ -1,0 +1,621 @@
+{
+  "capturedAt": "2026-11-06T13:07:46.889Z",
+  "branch": "adil-work",
+  "commit": "967ee598fb6b811423bd1ff9b6470841f4a4d432",
+  "status": "",
+  "existingResults": [
+    ".gitkeep"
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "807246124b4eef39b34bb66a011e189d5fc64b86b1c26fcc6410561d8662b055",
+      "bytes": 176
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/interfaces/draft-IERC6093.sol/IERC1155Errors.dbg.json",
+      "sha256": "c1d3ad5a8fad1602e72e73e78d95ada187e13059bf5ca740cd95506e5bcb3da5",
+      "bytes": 116
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/interfaces/draft-IERC6093.sol/IERC1155Errors.json",
+      "sha256": "f851d02dd4a19f7f437db98d48cb2e8294eb268896171d0f2e1b6ba1578d8e42",
+      "bytes": 2369
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/interfaces/draft-IERC6093.sol/IERC20Errors.dbg.json",
+      "sha256": "c1d3ad5a8fad1602e72e73e78d95ada187e13059bf5ca740cd95506e5bcb3da5",
+      "bytes": 116
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/interfaces/draft-IERC6093.sol/IERC20Errors.json",
+      "sha256": "75e24b47088659831c6319e68d137e22de7302676ed66846dfd84861db006cf4",
+      "bytes": 2014
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/interfaces/draft-IERC6093.sol/IERC721Errors.dbg.json",
+      "sha256": "c1d3ad5a8fad1602e72e73e78d95ada187e13059bf5ca740cd95506e5bcb3da5",
+      "bytes": 116
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/interfaces/draft-IERC6093.sol/IERC721Errors.json",
+      "sha256": "67ff1adfe3e8d386aefc8c70ee3cbeb6b6c69b397c7d1392abd0c9c9ab1995bd",
+      "bytes": 2327
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/token/ERC721/ERC721.sol/ERC721.dbg.json",
+      "sha256": "03ba09da0e22e1eda8d53a31391d1a6d33b47f08179fb48d98389fb43dcb2f18",
+      "bytes": 120
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/token/ERC721/ERC721.sol/ERC721.json",
+      "sha256": "26dd9765496e705ebddcddbae2446984729e3210b74553029d30d2186f45dcdf",
+      "bytes": 9123
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol/IERC721Metadata.dbg.json",
+      "sha256": "5ecc43ad98414c92814e7c3e4397d90515c73edb0ed6fd65ba3f722e47d8a362",
+      "bytes": 124
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol/IERC721Metadata.json",
+      "sha256": "f6a9bce52932abb33218aee6f0870548b7863ac84a1e7fc922717bc8efb08d68",
+      "bytes": 7109
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/token/ERC721/IERC721.sol/IERC721.dbg.json",
+      "sha256": "03ba09da0e22e1eda8d53a31391d1a6d33b47f08179fb48d98389fb43dcb2f18",
+      "bytes": 120
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/token/ERC721/IERC721.sol/IERC721.json",
+      "sha256": "f37e7672a57e5cce24a8706e663a4e021e001acd828805f6b14de4aed33deb4a",
+      "bytes": 6217
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol/IERC721Receiver.dbg.json",
+      "sha256": "03ba09da0e22e1eda8d53a31391d1a6d33b47f08179fb48d98389fb43dcb2f18",
+      "bytes": 120
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol/IERC721Receiver.json",
+      "sha256": "f3db3eb53683157379a4fa3f5efb9987f25765d824437359e8d47c3063f49b2a",
+      "bytes": 990
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/token/ERC721/utils/ERC721Utils.sol/ERC721Utils.dbg.json",
+      "sha256": "5ecc43ad98414c92814e7c3e4397d90515c73edb0ed6fd65ba3f722e47d8a362",
+      "bytes": 124
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/token/ERC721/utils/ERC721Utils.sol/ERC721Utils.json",
+      "sha256": "c60dc7b7935169b91747ad7a0031935e796f7bc0e3cc7055b60da80a19ca4fee",
+      "bytes": 705
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/utils/Bytes.sol/Bytes.dbg.json",
+      "sha256": "c1d3ad5a8fad1602e72e73e78d95ada187e13059bf5ca740cd95506e5bcb3da5",
+      "bytes": 116
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/utils/Bytes.sol/Bytes.json",
+      "sha256": "2fc8c47b5fa87a14c5b080d641652e8c0e6c66016417e693753f573ffa018a0b",
+      "bytes": 680
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/utils/Context.sol/Context.dbg.json",
+      "sha256": "c1d3ad5a8fad1602e72e73e78d95ada187e13059bf5ca740cd95506e5bcb3da5",
+      "bytes": 116
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/utils/Context.sol/Context.json",
+      "sha256": "4e976e9054315918d801adab824f80a3c2ee91497df846161e264fb6cd42504b",
+      "bytes": 244
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/utils/cryptography/Hashes.sol/Hashes.dbg.json",
+      "sha256": "03ba09da0e22e1eda8d53a31391d1a6d33b47f08179fb48d98389fb43dcb2f18",
+      "bytes": 120
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/utils/cryptography/Hashes.sol/Hashes.json",
+      "sha256": "abde001666132d1c513fbb98bcd144ce451e1314b3a8aca4a149d9f557bf98e6",
+      "bytes": 695
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/utils/cryptography/MerkleProof.sol/MerkleProof.dbg.json",
+      "sha256": "03ba09da0e22e1eda8d53a31391d1a6d33b47f08179fb48d98389fb43dcb2f18",
+      "bytes": 120
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/utils/cryptography/MerkleProof.sol/MerkleProof.json",
+      "sha256": "8489e20e338f0f2125196e34a20d2353d796079da5aad6484af7ddc747851571",
+      "bytes": 808
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/utils/introspection/ERC165.sol/ERC165.dbg.json",
+      "sha256": "03ba09da0e22e1eda8d53a31391d1a6d33b47f08179fb48d98389fb43dcb2f18",
+      "bytes": 120
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/utils/introspection/ERC165.sol/ERC165.json",
+      "sha256": "79ed90958154bf6c1db235ec5684c57e331c5692fab60cee07352af197cb0997",
+      "bytes": 636
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/utils/introspection/IERC165.sol/IERC165.dbg.json",
+      "sha256": "03ba09da0e22e1eda8d53a31391d1a6d33b47f08179fb48d98389fb43dcb2f18",
+      "bytes": 120
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/utils/introspection/IERC165.sol/IERC165.json",
+      "sha256": "8416d9d840f76fa3bd66aaae68698eb8248c334364519659193ba22c1407b596",
+      "bytes": 638
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/utils/math/Math.sol/Math.dbg.json",
+      "sha256": "03ba09da0e22e1eda8d53a31391d1a6d33b47f08179fb48d98389fb43dcb2f18",
+      "bytes": 120
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/utils/math/Math.sol/Math.json",
+      "sha256": "9bd67f1a02b85180b33e33233d335588470d811e448038a817b2e5e6e00c6c2c",
+      "bytes": 683
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/utils/math/SafeCast.sol/SafeCast.dbg.json",
+      "sha256": "03ba09da0e22e1eda8d53a31391d1a6d33b47f08179fb48d98389fb43dcb2f18",
+      "bytes": 120
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/utils/math/SafeCast.sol/SafeCast.json",
+      "sha256": "0fcd34775df1224f8a06aae89c0e8ee761507510791b025a13bbf934a3758494",
+      "bytes": 1786
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/utils/math/SignedMath.sol/SignedMath.dbg.json",
+      "sha256": "03ba09da0e22e1eda8d53a31391d1a6d33b47f08179fb48d98389fb43dcb2f18",
+      "bytes": 120
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/utils/math/SignedMath.sol/SignedMath.json",
+      "sha256": "1e43c08f5bf110995552e26aeba1528e92180d6fde037d6a604fba0332dfb02d",
+      "bytes": 695
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/utils/Panic.sol/Panic.dbg.json",
+      "sha256": "c1d3ad5a8fad1602e72e73e78d95ada187e13059bf5ca740cd95506e5bcb3da5",
+      "bytes": 116
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/utils/Panic.sol/Panic.json",
+      "sha256": "bea3d3c3c6d673de55357a319cca26368a46d693d0ad3fb594b47975141bfa06",
+      "bytes": 680
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/utils/Strings.sol/Strings.dbg.json",
+      "sha256": "c1d3ad5a8fad1602e72e73e78d95ada187e13059bf5ca740cd95506e5bcb3da5",
+      "bytes": 116
+    },
+    {
+      "path": "artifacts/@openzeppelin/contracts/utils/Strings.sol/Strings.json",
+      "sha256": "cc5b512fb1515e5a5a7f0d174dbc19e9fec87b1b6db346a688a0838f24f4d1c6",
+      "bytes": 1211
+    },
+    {
+      "path": "artifacts/build-info/2ecc2cd7604ec759ea6a8d22ded7f149.json",
+      "sha256": "5ca690bf4bfad25ede5fddc5574e36c8936dea39e04ce2b084fbb79a73f6f475",
+      "bytes": 2698741
+    },
+    {
+      "path": "artifacts/contracts/HashRegistry.sol/HashRegistry.dbg.json",
+      "sha256": "0d3f7ff836de9c8b4d055cbaeb866c682e4bcbf298cdd2c487e83a39439806e2",
+      "bytes": 108
+    },
+    {
+      "path": "artifacts/contracts/HashRegistry.sol/HashRegistry.json",
+      "sha256": "aab11fda45c8f3575b171e4618b1bc75cbf407da2e4de5191a74c3ed0f1f9b0f",
+      "bytes": 6596
+    },
+    {
+      "path": "artifacts/contracts/MerkleCredentialAnchor.sol/MerkleCredentialAnchor.dbg.json",
+      "sha256": "0d3f7ff836de9c8b4d055cbaeb866c682e4bcbf298cdd2c487e83a39439806e2",
+      "bytes": 108
+    },
+    {
+      "path": "artifacts/contracts/MerkleCredentialAnchor.sol/MerkleCredentialAnchor.json",
+      "sha256": "68cf180af486d2212ce51ca805b7719d796ed6ba8fbf4b4be92844fdde4a94b3",
+      "bytes": 8451
+    },
+    {
+      "path": "artifacts/contracts/SoulboundCredential.sol/SoulboundCredential.dbg.json",
+      "sha256": "0d3f7ff836de9c8b4d055cbaeb866c682e4bcbf298cdd2c487e83a39439806e2",
+      "bytes": 108
+    },
+    {
+      "path": "artifacts/contracts/SoulboundCredential.sol/SoulboundCredential.json",
+      "sha256": "8a1e458acfdc9b1cc2f635a0f3144d266372af34d9de5a3eb336cf5059801b71",
+      "bytes": 30652
+    },
+    {
+      "path": "cache/solidity-files-cache.json",
+      "sha256": "2e9983a597bb2a22fa63f18a4fc862d3b9a8caa252bbcb774981cc4b38c61fab",
+      "bytes": 20962
+    },
+    {
+      "path": "contracts/HashRegistry.sol",
+      "sha256": "c7566627e8c5d574913333f95e74ba52c01c184961eb65fd55e44f370cbb0e4b",
+      "bytes": 1436
+    },
+    {
+      "path": "contracts/MerkleCredentialAnchor.sol",
+      "sha256": "eab877c9cb0716c249398faf8b9741387886482756fd5c55268a9843876437b0",
+      "bytes": 1751
+    },
+    {
+      "path": "contracts/SoulboundCredential.sol",
+      "sha256": "b36ea7de0128407c313dd843095198f810e3a66fb62fc1594293161ee9a0e7ae",
+      "bytes": 1967
+    },
+    {
+      "path": "hardhat.config.ts",
+      "sha256": "3d2e98208ea39f61be2cc6bda2186c58d320924dcd9b557543fda1fe2d0280bd",
+      "bytes": 450
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "1171de99f8c4872026ee518057f7e8e8d0d00509667c7303c5f673266102d98b",
+      "bytes": 1134
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "bbe232d92e7fc77abc02d775615ccf5357c94ec2d8bdae706d3058c0f80ccae9",
+      "bytes": 290543
+    },
+    {
+      "path": "package.json",
+      "sha256": "0d59c0e509a932f57bd29132283e02c20f8d6c745a731905aad77090a53aa855",
+      "bytes": 639
+    },
+    {
+      "path": "README.md",
+      "sha256": "75cad958b4a8983ccee1b6f97e433567e32e60a8ed48c5570d985ed564705dad",
+      "bytes": 3718
+    },
+    {
+      "path": "results/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "scripts/benchmark.ts",
+      "sha256": "0ea6d4825af8e77179f9a15a08ac30257f375362ba4d7ee3d40e753ba1133bd1",
+      "bytes": 6553
+    },
+    {
+      "path": "scripts/lib/leaves.ts",
+      "sha256": "ff2a7e5407f2d1ba921851767b21e085bd28aa09a321ffbea02327c418513549",
+      "bytes": 338
+    },
+    {
+      "path": "scripts/lib/merkle.ts",
+      "sha256": "c40093c088b4b625a2d0d8809a9184c84382f0d35be811ccfdfd2658d243bd6d",
+      "bytes": 1374
+    },
+    {
+      "path": "scripts/lib/settings.ts",
+      "sha256": "7bc9e1b97e5bc9a3e865a6995a728c95f707d7afdd9dd9bc878490d0cecac158",
+      "bytes": 126
+    },
+    {
+      "path": "test/HashRegistry.ts",
+      "sha256": "58d25ba96e77991ead7c1d354e9cf205f0280fa080d378d1271a15000e4ec321",
+      "bytes": 1423
+    },
+    {
+      "path": "test/MerkleCredentialAnchor.ts",
+      "sha256": "c82935e36b5a0d3ef657f5c22112f507933efc2d25094a63fdc22975c57f2d5f",
+      "bytes": 1764
+    },
+    {
+      "path": "test/SoulboundCredential.ts",
+      "sha256": "aa1e4c6de6396afde3aa930deddd4a754368542ade3a5f7c66b2bcf6670e4ce7",
+      "bytes": 1903
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "fea5b6f14ec33d5b52bb03b9166496570b7a0e493b12440649eed0cdf6e92f7f",
+      "bytes": 389
+    },
+    {
+      "path": "typechain-types/@openzeppelin/contracts/index.ts",
+      "sha256": "68a5458dac60d3b0ea18206ce9d69fc4ed298883ec7a325a9d26e3383edb3188",
+      "bytes": 291
+    },
+    {
+      "path": "typechain-types/@openzeppelin/contracts/interfaces/draft-IERC6093.sol/IERC1155Errors.ts",
+      "sha256": "c9fca8b9fc3defc590972fd9581b8b4eefa3eabb3d86da8ab5abb101f61f341d",
+      "bytes": 1983
+    },
+    {
+      "path": "typechain-types/@openzeppelin/contracts/interfaces/draft-IERC6093.sol/IERC20Errors.ts",
+      "sha256": "e5b654c4fba1f35d5efebf9263a00d7e51802fba5050680cea0cea0b7f6a3474",
+      "bytes": 1975
+    },
+    {
+      "path": "typechain-types/@openzeppelin/contracts/interfaces/draft-IERC6093.sol/IERC721Errors.ts",
+      "sha256": "b5cf76fb8ffd65b58e75a839b8db4864c724ad2c74120a140d799ad45000ae16",
+      "bytes": 1979
+    },
+    {
+      "path": "typechain-types/@openzeppelin/contracts/interfaces/draft-IERC6093.sol/index.ts",
+      "sha256": "495bdef80f49b1fc70780213c412a1ee5a085b7cce3293129f6fdc31ab182c04",
+      "bytes": 252
+    },
+    {
+      "path": "typechain-types/@openzeppelin/contracts/interfaces/index.ts",
+      "sha256": "235d870ef8cd87bd63b3450eea65be8f9f04dbb4486784bc7badfe3e74ea2b38",
+      "bytes": 187
+    },
+    {
+      "path": "typechain-types/@openzeppelin/contracts/token/ERC721/ERC721.ts",
+      "sha256": "50cf79b132c7756224eceeb710ad486a0d912a20e056f35dcf941e5119a62f7b",
+      "bytes": 11664
+    },
+    {
+      "path": "typechain-types/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.ts",
+      "sha256": "f9213c175097b81bc21ce62ca135a42d6cfd7c608efcfbd0d3c5ae9da0419fca",
+      "bytes": 11703
+    },
+    {
+      "path": "typechain-types/@openzeppelin/contracts/token/ERC721/extensions/index.ts",
+      "sha256": "cb5ed2db28b43e3e7bbedb88fbc4f60954835afc10e6e7ee19fe70c6971a7e58",
+      "bytes": 148
+    },
+    {
+      "path": "typechain-types/@openzeppelin/contracts/token/ERC721/IERC721.ts",
+      "sha256": "0827c3ee6534f3e01060f77d317f6b8fd35bcc1a1b4e2bc013e18059fb73086c",
+      "bytes": 10653
+    },
+    {
+      "path": "typechain-types/@openzeppelin/contracts/token/ERC721/IERC721Receiver.ts",
+      "sha256": "8f4a31ca045d131b9b1a505505535ffc10ee22154da5818d027e38355662e68e",
+      "bytes": 2809
+    },
+    {
+      "path": "typechain-types/@openzeppelin/contracts/token/ERC721/index.ts",
+      "sha256": "630c3120fb065c6af2aadb21179d4c3d20c8e11fa7513ff6b7010beec434c616",
+      "bytes": 307
+    },
+    {
+      "path": "typechain-types/@openzeppelin/contracts/token/index.ts",
+      "sha256": "57e3ff05f88c4ecf6e970f8380f3dbbe98b31433e472ab7961ddad2b1992b389",
+      "bytes": 155
+    },
+    {
+      "path": "typechain-types/@openzeppelin/contracts/utils/cryptography/index.ts",
+      "sha256": "467fb6d737175af2ae8981168eb0f4a09c782add2fbbb17a36a8465fd4b1b099",
+      "bytes": 140
+    },
+    {
+      "path": "typechain-types/@openzeppelin/contracts/utils/cryptography/MerkleProof.ts",
+      "sha256": "b207cc14f9fac982c222616ccdbe8e730c497092b1a3642d1ef939ad9b784e24",
+      "bytes": 1971
+    },
+    {
+      "path": "typechain-types/@openzeppelin/contracts/utils/index.ts",
+      "sha256": "74513a5a8b9e9b68650e400a3e0b79b994315a12cba546178a2168fac2429fae",
+      "bytes": 360
+    },
+    {
+      "path": "typechain-types/@openzeppelin/contracts/utils/introspection/ERC165.ts",
+      "sha256": "7e07abd83f092d72a0cf251f6c6d61d34a262bf6cd6fe9f58bdec4d73dff60e9",
+      "bytes": 2505
+    },
+    {
+      "path": "typechain-types/@openzeppelin/contracts/utils/introspection/IERC165.ts",
+      "sha256": "0fdaef3a960486721a2225143237eeb0c3beb31fb99407ebadfbedd58febc3c3",
+      "bytes": 2509
+    },
+    {
+      "path": "typechain-types/@openzeppelin/contracts/utils/introspection/index.ts",
+      "sha256": "00d63b7ca0b1e8f3ac4ebfe454a36e56be0559673570e91a4084e19a05f2d701",
+      "bytes": 172
+    },
+    {
+      "path": "typechain-types/@openzeppelin/contracts/utils/math/index.ts",
+      "sha256": "e82e848cbc7a4338827a9ce5841763e49ac3a12d258c85bdddbaf520dcf5b7af",
+      "bytes": 134
+    },
+    {
+      "path": "typechain-types/@openzeppelin/contracts/utils/math/SafeCast.ts",
+      "sha256": "d4e0659fa14f6b23355e00cb14347d692ce61942d576be86bc518dde287f496c",
+      "bytes": 1959
+    },
+    {
+      "path": "typechain-types/@openzeppelin/contracts/utils/Strings.ts",
+      "sha256": "440dcc4b2ef665670a0f723813b2a6ae643235477973cb24ec33797260d972ef",
+      "bytes": 1952
+    },
+    {
+      "path": "typechain-types/@openzeppelin/index.ts",
+      "sha256": "514058c15a832c38d8111ced11167fcb833f606febe918d4b9eac19c90a8c538",
+      "bytes": 164
+    },
+    {
+      "path": "typechain-types/common.ts",
+      "sha256": "731e0081f38d42ce515f768bfea9cb5e671ec00b7d168033af39d5c62f8cf9eb",
+      "bytes": 3718
+    },
+    {
+      "path": "typechain-types/contracts/HashRegistry.ts",
+      "sha256": "c1e1b7a4b0099149754e4904d48c89b6eb54cf62933d93a9dac51a18a29f4b2c",
+      "bytes": 5872
+    },
+    {
+      "path": "typechain-types/contracts/index.ts",
+      "sha256": "e0aa831b2a3fed6af429b20091ce11eeb6e2f7c17fb906c02c4e5bc0757d715b",
+      "bytes": 280
+    },
+    {
+      "path": "typechain-types/contracts/MerkleCredentialAnchor.ts",
+      "sha256": "2b72a241083843ac50f715c4f8ce4f77e58fac17b80611c88f68a6708371bd14",
+      "bytes": 6689
+    },
+    {
+      "path": "typechain-types/contracts/SoulboundCredential.ts",
+      "sha256": "a641c978e80aa5a810d9d8ea4995ea5f7b5c7f89eabb02b850e9ef2b66efcd31",
+      "bytes": 15777
+    },
+    {
+      "path": "typechain-types/factories/@openzeppelin/contracts/index.ts",
+      "sha256": "06884b61c5223059b5198e4f373abb0ca352722a7e9ed105cd74350a4dbced6b",
+      "bytes": 202
+    },
+    {
+      "path": "typechain-types/factories/@openzeppelin/contracts/interfaces/draft-IERC6093.sol/IERC1155Errors__factory.ts",
+      "sha256": "8a59087bcd3288bb7f0f9782f493fc0946d42e81040ff5829e5520a1d1fd0628",
+      "bytes": 2517
+    },
+    {
+      "path": "typechain-types/factories/@openzeppelin/contracts/interfaces/draft-IERC6093.sol/IERC20Errors__factory.ts",
+      "sha256": "0babd3970c0b6a7eba83ed34f1d2d6fcc6b4d5ad414961394f373be63bf13c32",
+      "bytes": 2194
+    },
+    {
+      "path": "typechain-types/factories/@openzeppelin/contracts/interfaces/draft-IERC6093.sol/IERC721Errors__factory.ts",
+      "sha256": "addb39a9e89ca6ed06217013f9a357835bdcee8148d976b9262ccf9af6637bf1",
+      "bytes": 2467
+    },
+    {
+      "path": "typechain-types/factories/@openzeppelin/contracts/interfaces/draft-IERC6093.sol/index.ts",
+      "sha256": "f825d12c65b3fdbf08e6261e667311f35484c13fe33838dae56e0864096a88cf",
+      "bytes": 291
+    },
+    {
+      "path": "typechain-types/factories/@openzeppelin/contracts/interfaces/index.ts",
+      "sha256": "fbca8246816da303469fccc4db779e5ea01fb40f9f970f904d92b556170209cd",
+      "bytes": 148
+    },
+    {
+      "path": "typechain-types/factories/@openzeppelin/contracts/token/ERC721/ERC721__factory.ts",
+      "sha256": "fda54e07b9b5e14a76fe27007eaa4d206653c01e0366b31970b630418a7ca0d6",
+      "bytes": 8207
+    },
+    {
+      "path": "typechain-types/factories/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata__factory.ts",
+      "sha256": "55da49a74a5a4a054a67f4f15156406850994377a2c35acbeea682de467ef57c",
+      "bytes": 6555
+    },
+    {
+      "path": "typechain-types/factories/@openzeppelin/contracts/token/ERC721/extensions/index.ts",
+      "sha256": "6f5807240a8fc96d52102824a8de498637da104f68083f1563d628b264eb61e7",
+      "bytes": 161
+    },
+    {
+      "path": "typechain-types/factories/@openzeppelin/contracts/token/ERC721/IERC721Receiver__factory.ts",
+      "sha256": "a7e14bcc8ebe0d490b60f18916fad39cbb46f9c1940280d63935ce36092e4949",
+      "bytes": 1317
+    },
+    {
+      "path": "typechain-types/factories/@openzeppelin/contracts/token/ERC721/IERC721__factory.ts",
+      "sha256": "08fc5a8fdaeb6cf8bd34244235076b71bf99e52e7429b8100fc054ff08c4e1f6",
+      "bytes": 5733
+    },
+    {
+      "path": "typechain-types/factories/@openzeppelin/contracts/token/ERC721/index.ts",
+      "sha256": "2b285005933d042f2ec1b5549db0f2484c2833033ad8616503a035f914c6a824",
+      "bytes": 313
+    },
+    {
+      "path": "typechain-types/factories/@openzeppelin/contracts/token/index.ts",
+      "sha256": "09fd3a6790c4d14322111e3a26555d742544b81d82b65d1ff126b18e69a40638",
+      "bytes": 126
+    },
+    {
+      "path": "typechain-types/factories/@openzeppelin/contracts/utils/cryptography/index.ts",
+      "sha256": "6348c7b04562bc4660448b7c20671d23f2f1edb237e5668b25ba9495b5bd93c0",
+      "bytes": 153
+    },
+    {
+      "path": "typechain-types/factories/@openzeppelin/contracts/utils/cryptography/MerkleProof__factory.ts",
+      "sha256": "9ca678bc8c3c6ca3bcc86af9ab73ddd803c534c9b0ec66af86ea3ebeadcd0e72",
+      "bytes": 2252
+    },
+    {
+      "path": "typechain-types/factories/@openzeppelin/contracts/utils/index.ts",
+      "sha256": "fc49c388cba42e2c8a2306cad8e3a1e52d4b232ff471dd895f4996d141c83a0d",
+      "bytes": 275
+    },
+    {
+      "path": "typechain-types/factories/@openzeppelin/contracts/utils/introspection/ERC165__factory.ts",
+      "sha256": "7b0c049e338a9eff4a32b765ef0be8c959d2079bda811252c20e85c29ba17dc9",
+      "bytes": 942
+    },
+    {
+      "path": "typechain-types/factories/@openzeppelin/contracts/utils/introspection/IERC165__factory.ts",
+      "sha256": "3faa443f532d2c11d24875154328253c3b3dd10264cb8661aa022da9e6255887",
+      "bytes": 950
+    },
+    {
+      "path": "typechain-types/factories/@openzeppelin/contracts/utils/introspection/index.ts",
+      "sha256": "8420ef51e6dc0cc43f1e32dcc04e3a9c37a67b12d30948d7af615dbf60ab1354",
+      "bytes": 198
+    },
+    {
+      "path": "typechain-types/factories/@openzeppelin/contracts/utils/math/index.ts",
+      "sha256": "72edfe3f5c0267f2bc573cc706843ccf7bbf0be810f062519d3bac4d5e7bf1c4",
+      "bytes": 147
+    },
+    {
+      "path": "typechain-types/factories/@openzeppelin/contracts/utils/math/SafeCast__factory.ts",
+      "sha256": "58559c76767dd06808301f961d1c5879fad9b36702fcb01f633548177b52b8ca",
+      "bytes": 3055
+    },
+    {
+      "path": "typechain-types/factories/@openzeppelin/contracts/utils/Strings__factory.ts",
+      "sha256": "1e1f04783583c1e1b5ad250eec73625b010c11f77fcf53ef09ce14c54c6d3098",
+      "bytes": 2540
+    },
+    {
+      "path": "typechain-types/factories/@openzeppelin/index.ts",
+      "sha256": "9d1874b1d273f1d4d9646ea2c320b18ce1edb6e0e441cc8b532ed252378fea88",
+      "bytes": 132
+    },
+    {
+      "path": "typechain-types/factories/contracts/HashRegistry__factory.ts",
+      "sha256": "0a8f1bf00901f9aaf989c6a4a49b6b288aba47f17930933ff703540b6144eb7e",
+      "bytes": 5989
+    },
+    {
+      "path": "typechain-types/factories/contracts/index.ts",
+      "sha256": "6f586e916efe88be8760bd4c17bc9c2cfef203110ebdfb33c9cb96ab65baa773",
+      "bytes": 319
+    },
+    {
+      "path": "typechain-types/factories/contracts/MerkleCredentialAnchor__factory.ts",
+      "sha256": "70bf1e66278fc23b491c4ec67988ebb50aa9e12c52921ab711cfeac8c363d176",
+      "bytes": 7365
+    },
+    {
+      "path": "typechain-types/factories/contracts/SoulboundCredential__factory.ts",
+      "sha256": "b49b0a59c57270712c30b71678725a903d9c3892e1b7fb305a9f14e0b80102ab",
+      "bytes": 21842
+    },
+    {
+      "path": "typechain-types/factories/index.ts",
+      "sha256": "3af4fb8565ae637077dda511ecfab5adb85f4db45a71f5fc4fc854ed7875b1fb",
+      "bytes": 181
+    },
+    {
+      "path": "typechain-types/hardhat.d.ts",
+      "sha256": "2dc740c2fb7caeec59b9eb95efc6de53e00e924be3a27d709664e95e8934c1be",
+      "bytes": 10658
+    },
+    {
+      "path": "typechain-types/index.ts",
+      "sha256": "a029ab2af80ea87fa97154add3b5c4b06eaaaf2d51ad8a57d5a1b015361b8e1d",
+      "bytes": 3265
+    }
+  ]
+}

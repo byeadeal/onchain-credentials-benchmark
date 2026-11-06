@@ -1,0 +1,23 @@
+
+> onchain-credentials-benchmark@0.1.0 test
+> hardhat test
+
+
+
+  HashRegistry
+    √ issues, verifies, and revokes a credential (551ms)
+    √ rejects a second issue, a bad revoke, and a non-issuer
+
+  MerkleCredentialAnchor
+    √ anchors a batch and verifies every inclusion proof (41ms)
+    √ rejects a revoked leaf and a non-issuer
+
+  SoulboundCredential
+    √ mints a locked credential and blocks transfer and approval
+    √ revokes by burning
+
+
+  6 passing (711ms)
+
+
+STDERR:

@@ -1,0 +1,34 @@
+{
+  "analyzedAt": "2026-11-06T13:10:11.104Z",
+  "kind": "OFF-CHAIN DERIVATION ONLY; not an added benchmark measurement",
+  "anchoring": [
+    {
+      "cohortSize": 1,
+      "root": "0x76029f1eebd52c9aa130895905298a300b385d1d5e3038446de76cd026eea63d",
+      "calldataBytes": 68,
+      "zeroBytes": 31,
+      "nonzeroBytes": 37
+    },
+    {
+      "cohortSize": 10,
+      "root": "0xb170eaebb76682c5df14467c8fa99d2dbc9e473402b6edc16e57bccb0bca4bdf",
+      "calldataBytes": 68,
+      "zeroBytes": 31,
+      "nonzeroBytes": 37
+    },
+    {
+      "cohortSize": 100,
+      "root": "0x59d8aca543313ed3fa6e85cffc3d36e418f1ee241240a1e51c99d579570e6ced",
+      "calldataBytes": 68,
+      "zeroBytes": 31,
+      "nonzeroBytes": 37
+    },
+    {
+      "cohortSize": 1000,
+      "root": "0x741342a08c5a9ec203a14eb78bca86fa5a742e62fad886e15bf64ea6a5fea20c",
+      "calldataBytes": 68,
+      "zeroBytes": 30,
+      "nonzeroBytes": 38
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-11-06T13:14:06.664Z",
+  "status": "PASS",
+  "branch": "adil-work",
+  "commit": "967ee598fb6b811423bd1ff9b6470841f4a4d432",
+  "trackedDiff": "",
+  "stagedDiff": "",
+  "outsideScopeContentChanges": [],
+  "filesOutsideScopeChecked": 122,
+  "inventoryExcludes": [
+    ".git",
+    "node_modules",
+    "docs/adil"
+  ],
+  "resultsContents": [
+    ".gitkeep"
+  ],
+  "createdFiles": [
+    "docs/adil/baseline-report.md",
+    "docs/adil/evidence/anchor-input-analysis.json",
+    "docs/adil/evidence/benchmark-1-10-100.txt",
+    "docs/adil/evidence/benchmark-1000.txt",
+    "docs/adil/evidence/compiled-source-verification.json",
+    "docs/adil/evidence/csv-validation.json",
+    "docs/adil/evidence/environment.json",
+    "docs/adil/evidence/initial-inventory.json",
+    "docs/adil/evidence/issuance-1-10-100.csv",
+    "docs/adil/evidence/issuance-1000.csv",
+    "docs/adil/evidence/run-1-10-100.json",
+    "docs/adil/evidence/run-1000.json",
+    "docs/adil/evidence/scope-verification.json",
+    "docs/adil/evidence/test-run.json",
+    "docs/adil/evidence/tests.txt",
+    "docs/adil/experiment-protocol.md"
+  ],
+  "notes": [
+    "Existing tests and benchmark commands enabled normal compilation checks; generated files outside docs/adil have identical final content hashes.",
+    "No dependency installation or source modification was performed.",
+    "Each newly produced results/issuance.csv was moved to docs/adil/evidence immediately after its successful invocation."
+  ]
+}

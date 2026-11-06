@@ -1,0 +1,12 @@
+{
+  "command": "npm.cmd run benchmark",
+  "environment": {
+    "COHORT_SIZES": "1000"
+  },
+  "startedAt": "2026-11-06T13:08:37.998Z",
+  "finishedAt": "2026-11-06T13:08:44.434Z",
+  "exitCode": 0,
+  "signal": null,
+  "error": null,
+  "csvPreservedAs": "docs/adil/evidence/issuance-1000.csv"
+}

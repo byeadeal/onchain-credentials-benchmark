@@ -1,0 +1,123 @@
+{
+  "capturedAt": "2026-11-06T13:07:49.822Z",
+  "node": "v26.13.0",
+  "npm": "11.20.0",
+  "platform": "win32",
+  "arch": "x64",
+  "osRelease": "10.0.26200",
+  "timezone": "Asia/Qyzylorda",
+  "branch": "adil-work",
+  "commit": "967ee598fb6b811423bd1ff9b6470841f4a4d432",
+  "packageLockSha256": "bbe232d92e7fc77abc02d775615ccf5357c94ec2d8bdae706d3058c0f80ccae9",
+  "versions": {
+    "hardhat": "2.29.1",
+    "@openzeppelin/contracts": "5.6.1",
+    "ethers": "6.17.0",
+    "typescript": "5.9.3",
+    "ts-node": "10.9.2",
+    "@nomicfoundation/hardhat-toolbox": "6.1.2"
+  },
+  "hardhatSupportedNodeVersions": [
+    "^20.0.0",
+    "^22.0.0",
+    "^24.0.0"
+  ],
+  "network": {
+    "name": "hardhat",
+    "hardfork": "osaka",
+    "chainId": 31337,
+    "rpcChainId": "0x7a69",
+    "clientVersion": "HardhatNetwork/2.29.1/@nomicfoundation/edr/0.3.8",
+    "blockGasLimit": 60000000,
+    "mining": {
+      "auto": true,
+      "interval": 0,
+      "mempool": {
+        "order": "priority"
+      }
+    },
+    "forkingConfigured": false
+  },
+  "selectedEnvironment": {
+    "COHORT_SIZES": null,
+    "HARDHAT_NETWORK": null
+  },
+  "compilation": {
+    "compilers": [
+      {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "cancun",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "overrides": {}
+  },
+  "existingBuilds": [
+    {
+      "file": "2ecc2cd7604ec759ea6a8d22ded7f149.json",
+      "compiler": "0.8.28+commit.7893614a",
+      "settings": {
+        "optimizer": {
+          "enabled": true,
+          "runs": 200
+        },
+        "evmVersion": "cancun",
+        "outputSelection": {
+          "*": {
+            "*": [
+              "abi",
+              "evm.bytecode",
+              "evm.deployedBytecode",
+              "evm.methodIdentifiers",
+              "metadata"
+            ],
+            "": [
+              "ast"
+            ]
+          }
+        }
+      },
+      "sourceMatches": {
+        "@openzeppelin/contracts/interfaces/draft-IERC6093.sol": null,
+        "@openzeppelin/contracts/token/ERC721/ERC721.sol": null,
+        "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol": null,
+        "@openzeppelin/contracts/token/ERC721/IERC721.sol": null,
+        "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol": null,
+        "@openzeppelin/contracts/token/ERC721/utils/ERC721Utils.sol": null,
+        "@openzeppelin/contracts/utils/Bytes.sol": null,
+        "@openzeppelin/contracts/utils/Context.sol": null,
+        "@openzeppelin/contracts/utils/cryptography/Hashes.sol": null,
+        "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol": null,
+        "@openzeppelin/contracts/utils/introspection/ERC165.sol": null,
+        "@openzeppelin/contracts/utils/introspection/IERC165.sol": null,
+        "@openzeppelin/contracts/utils/math/Math.sol": null,
+        "@openzeppelin/contracts/utils/math/SafeCast.sol": null,
+        "@openzeppelin/contracts/utils/math/SignedMath.sol": null,
+        "@openzeppelin/contracts/utils/Panic.sol": null,
+        "@openzeppelin/contracts/utils/Strings.sol": null,
+        "contracts/HashRegistry.sol": true,
+        "contracts/MerkleCredentialAnchor.sol": true,
+        "contracts/SoulboundCredential.sol": true
+      }
+    }
+  ]
+}

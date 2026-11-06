@@ -1,0 +1,112 @@
+{
+  "checkedAt": "2026-11-06T13:10:09.655Z",
+  "builds": [
+    {
+      "file": "2ecc2cd7604ec759ea6a8d22ded7f149.json",
+      "compiler": "0.8.28+commit.7893614a",
+      "checks": [
+        {
+          "source": "@openzeppelin/contracts/interfaces/draft-IERC6093.sol",
+          "resolvedPath": "node_modules/@openzeppelin/contracts/interfaces/draft-IERC6093.sol",
+          "matches": true
+        },
+        {
+          "source": "@openzeppelin/contracts/token/ERC721/ERC721.sol",
+          "resolvedPath": "node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol",
+          "matches": true
+        },
+        {
+          "source": "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol",
+          "resolvedPath": "node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol",
+          "matches": true
+        },
+        {
+          "source": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
+          "resolvedPath": "node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol",
+          "matches": true
+        },
+        {
+          "source": "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
+          "resolvedPath": "node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
+          "matches": true
+        },
+        {
+          "source": "@openzeppelin/contracts/token/ERC721/utils/ERC721Utils.sol",
+          "resolvedPath": "node_modules/@openzeppelin/contracts/token/ERC721/utils/ERC721Utils.sol",
+          "matches": true
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Bytes.sol",
+          "resolvedPath": "node_modules/@openzeppelin/contracts/utils/Bytes.sol",
+          "matches": true
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Context.sol",
+          "resolvedPath": "node_modules/@openzeppelin/contracts/utils/Context.sol",
+          "matches": true
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/cryptography/Hashes.sol",
+          "resolvedPath": "node_modules/@openzeppelin/contracts/utils/cryptography/Hashes.sol",
+          "matches": true
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol",
+          "resolvedPath": "node_modules/@openzeppelin/contracts/utils/cryptography/MerkleProof.sol",
+          "matches": true
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
+          "resolvedPath": "node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol",
+          "matches": true
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+          "resolvedPath": "node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol",
+          "matches": true
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/math/Math.sol",
+          "resolvedPath": "node_modules/@openzeppelin/contracts/utils/math/Math.sol",
+          "matches": true
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/math/SafeCast.sol",
+          "resolvedPath": "node_modules/@openzeppelin/contracts/utils/math/SafeCast.sol",
+          "matches": true
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/math/SignedMath.sol",
+          "resolvedPath": "node_modules/@openzeppelin/contracts/utils/math/SignedMath.sol",
+          "matches": true
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Panic.sol",
+          "resolvedPath": "node_modules/@openzeppelin/contracts/utils/Panic.sol",
+          "matches": true
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Strings.sol",
+          "resolvedPath": "node_modules/@openzeppelin/contracts/utils/Strings.sol",
+          "matches": true
+        },
+        {
+          "source": "contracts/HashRegistry.sol",
+          "resolvedPath": "contracts/HashRegistry.sol",
+          "matches": true
+        },
+        {
+          "source": "contracts/MerkleCredentialAnchor.sol",
+          "resolvedPath": "contracts/MerkleCredentialAnchor.sol",
+          "matches": true
+        },
+        {
+          "source": "contracts/SoulboundCredential.sol",
+          "resolvedPath": "contracts/SoulboundCredential.sol",
+          "matches": true
+        }
+      ],
+      "allMatch": true
+    }
+  ]
+}

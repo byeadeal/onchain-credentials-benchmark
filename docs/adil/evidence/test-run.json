@@ -1,0 +1,8 @@
+{
+  "command": "npm.cmd test",
+  "startedAt": "2026-11-06T13:08:05.748Z",
+  "finishedAt": "2026-11-06T13:08:08.358Z",
+  "exitCode": 0,
+  "signal": null,
+  "error": null
+}

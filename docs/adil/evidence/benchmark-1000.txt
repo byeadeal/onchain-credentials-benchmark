@@ -1,0 +1,22 @@
+
+> onchain-credentials-benchmark@0.1.0 benchmark
+> hardhat run scripts/benchmark.ts
+
+issuance benchmark on hardhat, solc 0.8.28, optimizer 200, cancun
+cohort sizes: 1000
+cohort 1000: hash registry
+cohort 1000: soulbound token
+cohort 1000: merkle anchor
+
+architecture      cohort  operation   total_gas  txs  gas/credential
+hash_registry        1000  deploy           276954     1               -
+hash_registry        1000  issue          47893320  1000           47893
+soulbound            1000  deploy          1084575     1               -
+soulbound            1000  issue         124776324  1000          124776
+merkle_anchor        1000  deploy           332315     1               -
+merkle_anchor        1000  issue             70049     1              70
+
+wrote C:\Users\PC\Desktop\gitBlockchain\onchain-credentials-benchmark\results\issuance.csv
+verification and revocation rows are not measured yet
+
+STDERR:
