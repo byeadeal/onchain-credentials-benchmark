@@ -17,8 +17,8 @@ All three use the same credential payload (`NU-BSc-2026`, cohort size, index), s
 ```
 contracts/    HashRegistry, SoulboundCredential, MerkleCredentialAnchor
 test/         lifecycle tests for issue, verify, and revoke
-scripts/      issuance benchmark and the shared leaf / Merkle helpers
-results/      CSV output, gitignored
+scripts/      issuance benchmark, results plot, and the shared leaf / Merkle helpers
+results/      issuance.csv, figures/, and optional verification or revocation CSVs
 ```
 
 Solidity is pinned to **0.8.28** with the optimizer on (200 runs) and the Cancun EVM. Those settings live in `scripts/lib/settings.ts` and are what `hardhat.config.ts` compiles with.
@@ -53,9 +53,77 @@ Override the sizes with `COHORT_SIZES`:
 COHORT_SIZES=1,10 npm run benchmark
 ```
 
-The script overwrites `results/issuance.csv`. Each row records the compiler, optimizer runs, EVM target, network, and timestamp next to the gas totals.
+The script overwrites `results/issuance.csv`. Each row records the compiler, optimizer runs, EVM target, network, and timestamp next to receipt `gasUsed`. `operation` is `deploy` or `issue`. `total_gas` is the receipt total for that operation. `gas_per_credential` is blank for deployment and `floor(total_gas / cohort_size)` for issuance. That quotient is not `eth_estimateGas`, and deployment gas is not added to the issuance total. Hash-registry and soulbound issuance use one transaction per credential. Merkle issuance is one `anchor` receipt, so its per-credential figure divides that receipt by the cohort size.
 
-Verification gas, revocation gas, calldata size, repeated trials, and runs on a post-Dencun Layer 1 testnet or a Layer 2 rollup are not implemented yet.
+Verification gas, revocation gas, calldata size, repeated trials, and runs on a post-Dencun Layer 1 testnet or a Layer 2 rollup are not measured by this script.
+
+## Plot
+
+`scripts/plot_results.py` draws gas against cohort size. It does not measure gas. Deployment, total issuance, and per-credential issuance are separate panels, all from receipt `gasUsed`. The per-credential panel plots the CSV's `floor(total_gas / cohort_size)` column. It does not plot `eth_estimateGas`, and it does not add deployment into the issuance series.
+
+The same script can add panels from optional CSVs. A file that is not there is skipped. Missing rows are not drawn as zeros.
+
+Verification (`results/verification.csv`) uses scenarios `valid` and `invalid`. Its `gas` column is `eth_estimateGas`.
+
+Revocation (`results/revocation.csv`) uses scenario `revoke`. Its `gas` column is receipt `gasUsed`.
+
+Both optional files use this header. Extra columns are ignored. One row per architecture, cohort size, and scenario:
+
+```text
+architecture,cohort_size,scenario,gas
+```
+
+`architecture` is `hash_registry`, `soulbound`, or `merkle_anchor`.
+
+Install the plotting library, then regenerate the figure from the repository root:
+
+```bash
+python3 -m pip install matplotlib
+python3 scripts/plot_results.py
+```
+
+That reads `results/issuance.csv`, skips `results/verification.csv` and `results/revocation.csv` when they are absent, and writes `results/figures/gas_vs_cohort.png`.
+
+Pass the inputs explicitly:
+
+```bash
+python3 scripts/plot_results.py \
+  --issuance results/issuance.csv \
+  --output results/figures/gas_vs_cohort.png
+```
+
+When those optional results exist:
+
+```bash
+python3 scripts/plot_results.py \
+  --issuance results/issuance.csv \
+  --verification results/verification.csv \
+  --revocation results/revocation.csv \
+  --output results/figures/gas_vs_cohort.png
+```
+
+A path passed with `--verification` or `--revocation` has to exist. Omitting the flag uses the default path above and continues when that file is missing.
+
+Check the parser, including a temporary figure, without reading the benchmark CSV:
+
+```bash
+python3 scripts/test_plot_results.py
+```
+
+## Reproduce the issuance data and the figure
+
+From the repository root:
+
+```bash
+npm install
+npm test
+npm run benchmark
+python3 -m pip install matplotlib
+python3 scripts/plot_results.py
+python3 scripts/test_plot_results.py
+```
+
+`npm test` is the Hardhat contract suite. It does not run the gas benchmark. `npm run benchmark` overwrites `results/issuance.csv` for cohort sizes 1, 10, 100, and 1000. `results/*.csv` is gitignored; the issuance file in this tree was recorded from one local run.
 
 ## Roadmap
 
