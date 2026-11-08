@@ -1,0 +1,13 @@
+architecture,cohort_size,scenario,gas
+hash_registry,1,revoke,30454
+soulbound,1,revoke,40168
+merkle_anchor,1,revoke,47547
+hash_registry,10,revoke,304492
+soulbound,10,revoke,401680
+merkle_anchor,10,revoke,475422
+hash_registry,100,revoke,3045268
+soulbound,100,revoke,4016800
+merkle_anchor,100,revoke,4754568
+hash_registry,1000,revoke,30452320
+soulbound,1000,revoke,40174678
+merkle_anchor,1000,revoke,47545320
