@@ -1,6 +1,6 @@
 # Adil project context
 
-Last updated: 2026-11-13, after the assigned Day 1 verification implementation and experiments. The 2026-11-06 baseline remains preserved separately. Read this file and [WORKLOG.md](./WORKLOG.md) at the start of each substantial session. After finishing a work package, update the relevant status here and append its evidence, changed files, outcomes and remaining issues to the worklog.
+Last updated: 2026-11-13, after the final pre-meeting verification QA and report package. The 2026-11-06 baseline remains preserved separately. Read this file and [WORKLOG.md](./WORKLOG.md) at the start of each substantial session. After finishing a work package, update the relevant status here and append its evidence, changed files, outcomes and remaining issues to the worklog.
 
 ## Purpose and evidence labels
 
@@ -25,6 +25,8 @@ Before editing, inspect branch, status and existing differences. Work only on `a
 
 The November 13 task explicitly authorizes one scoped commit and normal push of the validated Day 1 verification contribution. It does not authorize a main merge or automatic PR creation. Remote branches and Alikhan's existing PR were inspected read-only; no teammate work was merged or edited.
 
+**VERIFIED current snapshot:** the implementation was published as `322b06d1359e620c459c3c71f953178fbdefff28`; the pre-meeting package started clean and synchronized on `adil-work`. The final pre-meeting assignment separately authorizes one documentation commit and ordinary push, with no PR creation or merges. This explicit instruction supersedes the handoff's earlier pending PR clarification. See [the current meeting QA](./MEETING_INTEGRATION_QA_2026-11-13.md#1-current-branch-and-review-snapshot) for exact main/teammate refs and open PR #1; the earlier zero-PR statement above is a November 6 historical snapshot.
+
 **VERIFIED assignment from Adil's November 13 instructions:** Adil owns verification benchmarking and methodology; Alikhan owns issuance/results/plotting on `alikhan/results`; Azhar owns revocation on `azhar/revocation`. This supersedes the earlier unresolved ownership question and authorizes [experiments/adil/](../../experiments/adil), the verification CSV and Adil-specific evidence/documentation. Shared contract, dependency and teammate files remain protected. Broader common-predicate contracts, root-rebuild policy or unrelated infrastructure still need coordination.
 
 ## Implemented architecture and scientific boundaries
@@ -47,6 +49,8 @@ Native operations are not scientifically interchangeable. Merkle anchoring exclu
 | [baseline-report.md](./baseline-report.md) | **VERIFIED archive consistency:** tests and issuance runs documented, with raw outputs/settings and qualifications |
 | [benchmark-extension-plan.md](./benchmark-extension-plan.md) | **VERIFIED design exists:** case matrix, isolation, expected files/tests, commands and schemas; all implementation defaults remain **PROPOSED** |
 | [DAY1_HANDOFF_2026-11-13.md](./DAY1_HANDOFF_2026-11-13.md) | **VERIFIED implementation/results:** small assigned verification experiment, tests, exact file inventory, actual values and team integration instructions |
+| [REPORT_READY_VERIFICATION_2026-11-13.md](./REPORT_READY_VERIFICATION_2026-11-13.md) | **VERIFIED evidence-based draft:** actual methods, index-0 estimate table, separate receipt evidence, interpretation, limitations, caption and cautious conclusion |
+| [MEETING_INTEGRATION_QA_2026-11-13.md](./MEETING_INTEGRATION_QA_2026-11-13.md) | **VERIFIED review snapshot:** independent archive audit, teammate compatibility findings, review commands, proposed integration order, report acceptance checks and speaking notes |
 
 **VERIFIED November 13 results:** pilot N=1/10 produced 24 mined samples; the full N=1/10/100/1000 run produced **60 mined samples and 24 estimate-only compatibility rows**. Unique first/middle/last indices were measured; the team CSV uses index 0 only. Estimates and receipt values were independently collected and happened to match in all samples. [results/verification.csv](../../results/verification.csv) feeds Alikhan's estimate-labelled plotter; [detailed receipt data](./evidence/verification-2026-11-13/full/verification-detailed.csv) stays separate. See [metadata](./evidence/verification-2026-11-13/full/metadata.json) for version/source hashes and [validation commands](./evidence/verification-2026-11-13/validation-commands.json) for successful 11-new/6-original tests, typecheck and both saved-run validators. The full run passed 16 revoked/corrupted-proof correctness checks; these are not revocation-cost measurements.
 
@@ -55,6 +59,8 @@ Native operations are not scientifically interchangeable. Merkle anchoring exclu
 **VERIFIED controls unchanged:** Solidity 0.8.28, optimizer enabled/200 runs, compiler target Cancun, default sizes 1/10/100/1000 and local Hardhat. Recorded/current environment: Node 26.13.0, npm 11.20.0, Hardhat 2.29.1, network `hardhat`, chain ID 31337, runtime hardfork **Osaka**. The runtime is a resolved default, not a pinned project setting. Reconciliation matched all 122 baseline-inventory files and all 20 compiled input sources to current files. No test/benchmark rerun was necessary because these checks found no source drift.
 
 **Preliminary measurements:** the November 6 issuance runner did not archive individual receipts or its ephemeral chain. The November 13 verification runner now archives real transaction/receipt pairs, but that still does not provide statistical replication or production validation. Synthetic numeric recipients and original payload conventions were retained; setup costs are excluded from verification gas. There is one local run per dataset, with deterministic position sampling. No Adil state-growth, revocation-cost, public-network or DA measurement is claimed. Academic references and claimed literature gaps remain **UNVERIFIED**.
+
+**VERIFIED pre-meeting QA:** independent input/proof reconstruction and signed-transaction hashing found all 60 full-run samples and 24 published rows internally consistent; 15 source and six saved-output hashes match. The archived 11+6 test outcomes were checked, without rerunning tests or experiments. Teammate branch changed-path sets are disjoint at the reviewed revisions. All 12 Alikhan issuance totals equal the November 6 baseline, but four Merkle deployment rows are each 332,327 versus 332,315 gas (**+12**); the cause is **OPEN**. Shared source/config/lockfile equality does not fill missing actual runtime provenance in Alikhan's and Azhar's CSVs. Verification is per-query estimation; revocation is a sum of N sequential receipts. Canonical run selection, captions, provenance qualifications and native semantic boundaries require joint agreement before final figures/conclusions. No new code correction was necessary.
 
 ## Reproducibility and reconciliation clarifications
 
