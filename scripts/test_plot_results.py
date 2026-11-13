@@ -147,6 +147,22 @@ class ScenarioParserTest(unittest.TestCase):
         self.assertEqual(revoke[0].measurement, "receipt")
         self.assertEqual(revoke[0].gas, 42)
 
+    def test_detailed_evidence_without_gas_column_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            path = write(
+                Path(tmp) / "detailed.csv",
+                "architecture,cohort_size,scenario,receipt_gas,gas_estimate\n"
+                "hash_registry,1,valid,1,1\n",
+            )
+            with self.assertRaises(ValueError) as caught:
+                plot_results.load_scenario(
+                    path,
+                    source="verification",
+                    measurement="estimate",
+                    allowed_scenarios=plot_results.VERIFICATION_SCENARIOS,
+                )
+        self.assertIn("missing columns: gas", str(caught.exception))
+
     def test_blank_gas_and_wrong_scenario_are_rejected(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

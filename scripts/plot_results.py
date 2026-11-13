@@ -450,7 +450,7 @@ def build_panels(data: PlotData) -> tuple[Panel, ...]:
                 measurement="receipt",
                 yscale=_yscale(tuple(value for series in revocation for value in series.gas), "log"),
                 series=revocation,
-                note="Scenario revoke. Mined receipt gas, not an estimate.",
+                note="Scenario revoke. Receipt gasUsed as recorded, not divided by cohort size.",
             )
         )
     return tuple(panels)
@@ -492,7 +492,9 @@ def footnote(panels: tuple[Panel, ...]) -> str:
     else:
         sentences.append("No verification CSV was plotted.")
     if "Revocation gas" in kinds:
-        sentences.append("Revocation gas is receipt gasUsed for scenario revoke.")
+        sentences.append(
+            "Revocation gas is receipt gasUsed for scenario revoke, plotted as recorded and not divided by cohort size."
+        )
     else:
         sentences.append("No revocation CSV was plotted.")
     return " ".join(sentences)

@@ -63,9 +63,9 @@ Verification gas, revocation gas, calldata size, repeated trials, and runs on a 
 
 The same script can add panels from optional CSVs. A file that is not there is skipped. Missing rows are not drawn as zeros.
 
-Verification (`results/verification.csv`) uses scenarios `valid` and `invalid`. Its `gas` column is `eth_estimateGas`.
+Verification (`results/verification.csv`) uses scenarios `valid` and `invalid`. Its `gas` column is `eth_estimateGas`. That is the four-column file, including the compatibility export that stores one estimate per architecture, cohort size, and scenario. A detailed evidence table that has `receipt_gas` and `gas_estimate` instead of `gas` is not an input. Receipt gas from that table is not copied into the verification panel.
 
-Revocation (`results/revocation.csv`) uses scenario `revoke`. Its `gas` column is receipt `gasUsed`.
+Revocation (`results/revocation.csv`) uses scenario `revoke`. Its `gas` column is receipt `gasUsed` as recorded. The revocation benchmark stores the sum of the cohort's revoke receipts in that cell. The plot draws the cell. It does not divide it by cohort size, and it does not treat it as `eth_estimateGas`.
 
 Both optional files use this header. Extra columns are ignored. One row per architecture, cohort size, and scenario:
 
@@ -75,10 +75,10 @@ architecture,cohort_size,scenario,gas
 
 `architecture` is `hash_registry`, `soulbound`, or `merkle_anchor`.
 
-Install the plotting library, then regenerate the figure from the repository root:
+Plotting uses Python 3.10 or newer and the packages in `requirements-plot.txt`. From the repository root:
 
 ```bash
-python3 -m pip install matplotlib
+python3 -m pip install -r requirements-plot.txt
 python3 scripts/plot_results.py
 ```
 
@@ -115,15 +115,15 @@ python3 scripts/test_plot_results.py
 From the repository root:
 
 ```bash
-npm install
+npm ci
 npm test
-npm run benchmark
-python3 -m pip install matplotlib
-python3 scripts/plot_results.py
+npx hardhat run scripts/benchmark.ts
+python3 -m pip install -r requirements-plot.txt
 python3 scripts/test_plot_results.py
+python3 scripts/plot_results.py
 ```
 
-`npm test` is the Hardhat contract suite. It does not run the gas benchmark. `npm run benchmark` overwrites `results/issuance.csv` for cohort sizes 1, 10, 100, and 1000. `results/*.csv` is gitignored; the issuance file in this tree was recorded from one local run.
+`npm test` is the Hardhat contract suite. It does not run the gas benchmark. `npx hardhat run scripts/benchmark.ts` is the same command as `npm run benchmark`. It overwrites `results/issuance.csv` for cohort sizes 1, 10, 100, and 1000, including `recorded_at`. `results/*.csv` is gitignored; the issuance file in this tree was recorded from one local run.
 
 ## Roadmap
 

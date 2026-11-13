@@ -1,0 +1,2 @@
+# Python packages for scripts/plot_results.py. The Hardhat benchmark does not use this file.
+matplotlib==3.11.2
