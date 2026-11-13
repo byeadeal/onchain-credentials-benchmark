@@ -1,0 +1,97 @@
+{
+  "schema_version": "adil-verification-day1-v1",
+  "status": "complete",
+  "started_at_utc": "2026-11-13T07:19:20.554Z",
+  "runId": "verification-2026-11-13/pilot",
+  "sourceCommit": "64c48705cdeacc904d53bec1f9c88246d11cea9c",
+  "network": "hardhat",
+  "chainId": 31337,
+  "runtimeHardfork": "osaka",
+  "compiler": "0.8.28",
+  "optimizerRuns": 200,
+  "evmTarget": "cancun",
+  "branch": "adil-work",
+  "initial_git_status": "?? docs/adil/evidence/verification-2026-11-13/remote-status.json\n?? experiments/adil/.gitattributes\n?? experiments/adil/.gitignore\n?? experiments/adil/hardhat.config.ts\n?? experiments/adil/run-verification.ts\n?? experiments/adil/test/verification.ts\n?? experiments/adil/tsconfig.json\n?? experiments/adil/validate-run.ts\n?? experiments/adil/verification.ts",
+  "cohort_sizes": [
+    1,
+    10
+  ],
+  "selection": "deduplicated [0, floor(N/2), N-1]; compatibility uses index 0 only",
+  "repetitions": 1,
+  "seed": "none; original credentialHash(N,index) convention",
+  "setup_excluded": true,
+  "command": "node_modules\\.bin\\hardhat.cmd --config experiments/adil/hardhat.config.ts --network hardhat run experiments/adil/run-verification.ts",
+  "environment": {
+    "ADIL_COHORT_SIZES": "1,10",
+    "ADIL_OUTPUT_DIR": "docs/adil/evidence/verification-2026-11-13/pilot",
+    "ADIL_PUBLISH_TEAM_CSV": "0",
+    "node": "v26.13.0",
+    "npm": "11.20.0",
+    "versions": {
+      "hardhat": "2.29.1",
+      "ethers": "6.17.0",
+      "@openzeppelin/contracts": "5.6.1",
+      "typescript": "5.9.3",
+      "ts-node": "10.9.2",
+      "@nomicfoundation/hardhat-toolbox": "6.1.2"
+    },
+    "hardhat_declared_node_support": [
+      "^20.0.0",
+      "^22.0.0",
+      "^24.0.0"
+    ]
+  },
+  "runtime": {
+    "hardfork": "osaka",
+    "chain_id": 31337,
+    "client": "HardhatNetwork/2.29.1/@nomicfoundation/edr/0.3.8",
+    "compiler": "0.8.28",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "evm_target": "cancun"
+  },
+  "source_sha256": {
+    "contracts/HashRegistry.sol": "c7566627e8c5d574913333f95e74ba52c01c184961eb65fd55e44f370cbb0e4b",
+    "contracts/SoulboundCredential.sol": "b36ea7de0128407c313dd843095198f810e3a66fb62fc1594293161ee9a0e7ae",
+    "contracts/MerkleCredentialAnchor.sol": "eab877c9cb0716c249398faf8b9741387886482756fd5c55268a9843876437b0",
+    "scripts/lib/leaves.ts": "ff2a7e5407f2d1ba921851767b21e085bd28aa09a321ffbea02327c418513549",
+    "scripts/lib/merkle.ts": "c40093c088b4b625a2d0d8809a9184c84382f0d35be811ccfdfd2658d243bd6d",
+    "scripts/lib/settings.ts": "7bc9e1b97e5bc9a3e865a6995a728c95f707d7afdd9dd9bc878490d0cecac158",
+    "hardhat.config.ts": "3d2e98208ea39f61be2cc6bda2186c58d320924dcd9b557543fda1fe2d0280bd",
+    "package.json": "0d59c0e509a932f57bd29132283e02c20f8d6c745a731905aad77090a53aa855",
+    "package-lock.json": "bbe232d92e7fc77abc02d775615ccf5357c94ec2d8bdae706d3058c0f80ccae9",
+    "experiments/adil/hardhat.config.ts": "5caef5990edf3bc895c0c3aa84c1904ecda0f42fa6803368491ce45c99f8b0ab",
+    "experiments/adil/run-verification.ts": "af09d9aea0fe67963b354d2e2ddb4c841970bddef9f6a4c2a61fcb3a9494c2c2",
+    "experiments/adil/tsconfig.json": "4f199918e848dc9a1c4d3975c85c37cf81150caab17d3f36e7b5bc5b2aef1654",
+    "experiments/adil/validate-run.ts": "eed7273dac274321570c122b42c4b387b3d4dd234b71b0e05d83a52a407f86d8",
+    "experiments/adil/verification.ts": "48718d44954a48ad7ab893b7d0279a49ea48d4ea75d375016b3c3e0aa50eac4a",
+    "experiments/adil/test/verification.ts": "f9b1b8ed4ff69008d327f297e9a7699103f21b7e69e8038c19555bb6e4f24700"
+  },
+  "teammate_refs": {
+    "alikhan_results": "c1b6fb23ac95965511cb23758f7c0b3916847f74",
+    "azhar_revocation": "0d865f1aaf722cb9b8265adeb2b2f870e6c78b2b",
+    "main": "967ee598fb6b811423bd1ff9b6470841f4a4d432"
+  },
+  "scientific_limits": [
+    "Native validity functions have different semantics; soulbound checks token existence/lock, not supplied hash or identity.",
+    "Local one-run synthetic data, deterministic selected positions, no statistical generalization.",
+    "Compiler Cancun and execution Osaka are distinct. Node 26 is outside installed Hardhat's declared support range if still used.",
+    "Gas estimation and mined receipt gas are different measurements, even if numerically equal.",
+    "No issuance, revocation-cost, proof-generation cost, RPC fee, DA or storage-growth measurement is claimed."
+  ],
+  "finished_at_utc": "2026-11-13T07:19:25.486Z",
+  "sample_rows": 24,
+  "compatibility_rows": 12,
+  "correctness_checks": 8,
+  "team_csv_published": false,
+  "artifact_sha256": {
+    "correctness-checks.json": "86c24b2bbc6e415778aa7704f6e9789212e79fde4d88e49e7a3a6fefafb7032a",
+    "fixtures.json": "f80a0c35c54f51770f52e8fbf1a8d589e2f7df0b8c900c4e2f04bebdb94a7717",
+    "measurements.json": "d1ab6e63ad2593656a270f404fae953c8373cda9095384eb9d96ad28dba1cdf3",
+    "transactions.jsonl": "bc3fd8a857fd08431d2b32be1cca3b9f23cf79674f6bb5b71269aa60e4543044",
+    "verification-detailed.csv": "fff6c54317cd9fea68ad698383f11e754c103dcdbc75a52335460e5e3a2af13c",
+    "verification-estimates.csv": "4d02ea6041cd79ac6150af093e7c39c721ab3f41b1e56503a3dd8861784455ed"
+  }
+}

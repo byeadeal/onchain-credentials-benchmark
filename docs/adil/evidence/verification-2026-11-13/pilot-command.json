@@ -1,0 +1,11 @@
+{
+  "command": "node_modules\\.bin\\hardhat.cmd --config experiments/adil/hardhat.config.ts --network hardhat run experiments/adil/run-verification.ts",
+  "started_at": "2026-11-13T07:19:15.723Z",
+  "finished_at": "2026-11-13T07:19:25.576Z",
+  "exit_code": 0,
+  "environment": {
+    "ADIL_COHORT_SIZES": "1,10",
+    "ADIL_OUTPUT_DIR": "docs/adil/evidence/verification-2026-11-13/pilot",
+    "ADIL_PUBLISH_TEAM_CSV": "0"
+  }
+}

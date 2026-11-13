@@ -1,0 +1,10 @@
+{
+  "initial_isolated_suite": { "command": "node_modules\\.bin\\hardhat.cmd --config experiments/adil/hardhat.config.ts --network hardhat test", "exit_code": 0, "passing": 11 },
+  "initial_standalone_pilot_validation": {
+    "command": "node -r ts-node/register experiments/adil/validate-run.ts docs/adil/evidence/verification-2026-11-13/pilot",
+    "exit_code": 1,
+    "errors": ["TS2305: hardhat ethers type augmentation not loaded by standalone ts-node", "TS7006: resulting implicit-any byte callback"],
+    "fix": "Added a type-only import of the existing @nomicfoundation/hardhat-ethers declarations; no dependencies, runtime logic or measurements changed. Subsequent validation is recorded separately.",
+    "pilot_source_hash_note": "Pilot retains the pre-fix source hashes. Full run records the final source hashes."
+  }
+}

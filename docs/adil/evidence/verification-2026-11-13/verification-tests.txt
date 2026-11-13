@@ -1,0 +1,20 @@
+
+
+  Adil verification measurements
+    √ selects deterministic unique positions and rejects unapproved or malformed sizes
+    √ all architectures accept issued and reject the specified unissued native input
+    √ archives actual mined receipts rather than static calls or estimates
+    √ keeps receipt and estimate labels separate and exports only genuine estimates
+    √ handles the singleton's valid empty proof and rejects a wrong nonempty proof
+    √ validates odd-sized tree proofs and rejects same-length sibling corruption
+    √ all architectures reject a credential after its native revocation
+    √ documents that a valid soulbound token does not validate an externally claimed hash
+    √ rejects incomplete, duplicate, mislabelled and zero-gas measurement data
+    √ writes the exact plotting schema and escapes CSV fields
+    √ refuses to overwrite existing evidence
+
+
+  11 passing (811ms)
+
+
+STDERR:

@@ -1,0 +1,3 @@
+PASS: 24 mined receipts, 12 distinct estimate-only compatibility rows; hashes, CSVs and correctness checks valid.
+
+STDERR:

@@ -1,0 +1,6 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": { "outDir": ".generated/js" },
+  "include": ["**/*.ts"],
+  "exclude": [".generated", "../../node_modules"]
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "name": "typecheck",
+    "command": "node_modules\\.bin\\tsc.cmd --noEmit --project experiments/adil/tsconfig.json",
+    "started_at": "2026-11-13T07:23:37.292Z",
+    "finished_at": "2026-11-13T07:23:39.383Z",
+    "exit_code": 0
+  },
+  {
+    "name": "verification-tests",
+    "command": "node_modules\\.bin\\hardhat.cmd --config experiments/adil/hardhat.config.ts --network hardhat test",
+    "started_at": "2026-11-13T07:23:39.384Z",
+    "finished_at": "2026-11-13T07:23:42.566Z",
+    "exit_code": 0
+  },
+  {
+    "name": "original-tests",
+    "command": "npm.cmd test",
+    "started_at": "2026-11-13T07:23:42.566Z",
+    "finished_at": "2026-11-13T07:23:47.739Z",
+    "exit_code": 0
+  },
+  {
+    "name": "validate-pilot",
+    "command": "node -r ts-node/register experiments/adil/validate-run.ts docs/adil/evidence/verification-2026-11-13/pilot",
+    "started_at": "2026-11-13T07:23:47.739Z",
+    "finished_at": "2026-11-13T07:23:52.923Z",
+    "exit_code": 0
+  },
+  {
+    "name": "validate-full",
+    "command": "node -r ts-node/register experiments/adil/validate-run.ts docs/adil/evidence/verification-2026-11-13/full",
+    "started_at": "2026-11-13T07:23:52.923Z",
+    "finished_at": "2026-11-13T07:23:59.206Z",
+    "exit_code": 0
+  }
+]

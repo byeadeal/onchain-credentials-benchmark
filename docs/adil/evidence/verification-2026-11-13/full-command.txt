@@ -1,0 +1,41 @@
+cohort 1: hash_registry
+cohort 1: soulbound
+cohort 1: merkle_anchor
+cohort 10: hash_registry
+cohort 10: soulbound
+cohort 10: merkle_anchor
+cohort 100: hash_registry
+cohort 100: soulbound
+cohort 100: merkle_anchor
+cohort 1000: hash_registry
+cohort 1000: soulbound
+cohort 1000: merkle_anchor
+architecture,cohort_size,scenario,gas
+hash_registry,1,valid,24120
+hash_registry,1,invalid,24120
+soulbound,1,valid,25934
+soulbound,1,invalid,23764
+merkle_anchor,1,valid,29177
+merkle_anchor,1,invalid,29177
+hash_registry,10,valid,24120
+hash_registry,10,invalid,24120
+soulbound,10,valid,25934
+soulbound,10,invalid,23764
+merkle_anchor,10,valid,32163
+merkle_anchor,10,invalid,32163
+hash_registry,100,valid,24108
+hash_registry,100,invalid,24120
+soulbound,100,valid,25934
+soulbound,100,invalid,23764
+merkle_anchor,100,valid,34456
+merkle_anchor,100,invalid,34458
+hash_registry,1000,valid,24120
+hash_registry,1000,invalid,24120
+soulbound,1000,valid,25934
+soulbound,1000,invalid,23776
+merkle_anchor,1000,valid,36665
+merkle_anchor,1000,invalid,36675
+
+validated 60 mined samples; 24 estimate-only compatibility rows; evidence: docs\adil\evidence\verification-2026-11-13\full
+
+STDERR:

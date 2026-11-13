@@ -1,0 +1,119 @@
+[
+  {
+    "architecture": "hash_registry",
+    "cohort_size": 1,
+    "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+    "batch_id": 1,
+    "root": null,
+    "hashes": [
+      "0x76029f1eebd52c9aa130895905298a300b385d1d5e3038446de76cd026eea63d"
+    ],
+    "selected_indices": [
+      0
+    ],
+    "setup_transaction_count": 2
+  },
+  {
+    "architecture": "soulbound",
+    "cohort_size": 1,
+    "address": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
+    "batch_id": 1,
+    "root": null,
+    "hashes": [
+      "0x76029f1eebd52c9aa130895905298a300b385d1d5e3038446de76cd026eea63d"
+    ],
+    "selected_indices": [
+      0
+    ],
+    "setup_transaction_count": 2
+  },
+  {
+    "architecture": "merkle_anchor",
+    "cohort_size": 1,
+    "address": "0x0165878A594ca255338adfa4d48449f69242Eb8F",
+    "batch_id": 1,
+    "root": "0x76029f1eebd52c9aa130895905298a300b385d1d5e3038446de76cd026eea63d",
+    "hashes": [
+      "0x76029f1eebd52c9aa130895905298a300b385d1d5e3038446de76cd026eea63d"
+    ],
+    "selected_indices": [
+      0
+    ],
+    "setup_transaction_count": 2
+  },
+  {
+    "architecture": "hash_registry",
+    "cohort_size": 10,
+    "address": "0x8A791620dd6260079BF849Dc5567aDC3F2FdC318",
+    "batch_id": 10,
+    "root": null,
+    "hashes": [
+      "0x345c01c88282cd33512773e128bf1e5934593fbda2dd469cd997e12b4b756732",
+      "0xd90162c21ef4137e2a7e0be5c3e33a0064c8d2c71a8a84000bee43ac87f10ffe",
+      "0xef29b033b202674b035210f67db617453138400aa42eac23a041bdd04ce25dc0",
+      "0xec442b0d658e5fc09ba57d2634c19f49a163010f1f16e42607d27829493c5f01",
+      "0x3b1d00e074808059c8f77291002a795db541903270fc0f560148b8ee98dce365",
+      "0xa5035aa9e168e8168c8f64688be9efcb65b03c366f6d76add6c1cac8215ecc30",
+      "0xc5c14394115b8a0cca66ec16ab6e6ac420617474dba9f4e4ca1497bea11b72b1",
+      "0xe39bff28efdd2840065711eaa6e80c56b677931c97560cc3b35a36165b9b5a0c",
+      "0xcdf66f9bdc0656dbf406974e6e5fb9fb314e17c7e8968c682726179e3c37c720",
+      "0xcd8d412e29733f40635587df0782682943846b063873c290726c71dfad31525e"
+    ],
+    "selected_indices": [
+      0,
+      5,
+      9
+    ],
+    "setup_transaction_count": 11
+  },
+  {
+    "architecture": "soulbound",
+    "cohort_size": 10,
+    "address": "0x59b670e9fA9D0A427751Af201D676719a970857b",
+    "batch_id": 10,
+    "root": null,
+    "hashes": [
+      "0x345c01c88282cd33512773e128bf1e5934593fbda2dd469cd997e12b4b756732",
+      "0xd90162c21ef4137e2a7e0be5c3e33a0064c8d2c71a8a84000bee43ac87f10ffe",
+      "0xef29b033b202674b035210f67db617453138400aa42eac23a041bdd04ce25dc0",
+      "0xec442b0d658e5fc09ba57d2634c19f49a163010f1f16e42607d27829493c5f01",
+      "0x3b1d00e074808059c8f77291002a795db541903270fc0f560148b8ee98dce365",
+      "0xa5035aa9e168e8168c8f64688be9efcb65b03c366f6d76add6c1cac8215ecc30",
+      "0xc5c14394115b8a0cca66ec16ab6e6ac420617474dba9f4e4ca1497bea11b72b1",
+      "0xe39bff28efdd2840065711eaa6e80c56b677931c97560cc3b35a36165b9b5a0c",
+      "0xcdf66f9bdc0656dbf406974e6e5fb9fb314e17c7e8968c682726179e3c37c720",
+      "0xcd8d412e29733f40635587df0782682943846b063873c290726c71dfad31525e"
+    ],
+    "selected_indices": [
+      0,
+      5,
+      9
+    ],
+    "setup_transaction_count": 11
+  },
+  {
+    "architecture": "merkle_anchor",
+    "cohort_size": 10,
+    "address": "0x9E545E3C0baAB3E08CdfD552C960A1050f373042",
+    "batch_id": 10,
+    "root": "0xb170eaebb76682c5df14467c8fa99d2dbc9e473402b6edc16e57bccb0bca4bdf",
+    "hashes": [
+      "0x345c01c88282cd33512773e128bf1e5934593fbda2dd469cd997e12b4b756732",
+      "0xd90162c21ef4137e2a7e0be5c3e33a0064c8d2c71a8a84000bee43ac87f10ffe",
+      "0xef29b033b202674b035210f67db617453138400aa42eac23a041bdd04ce25dc0",
+      "0xec442b0d658e5fc09ba57d2634c19f49a163010f1f16e42607d27829493c5f01",
+      "0x3b1d00e074808059c8f77291002a795db541903270fc0f560148b8ee98dce365",
+      "0xa5035aa9e168e8168c8f64688be9efcb65b03c366f6d76add6c1cac8215ecc30",
+      "0xc5c14394115b8a0cca66ec16ab6e6ac420617474dba9f4e4ca1497bea11b72b1",
+      "0xe39bff28efdd2840065711eaa6e80c56b677931c97560cc3b35a36165b9b5a0c",
+      "0xcdf66f9bdc0656dbf406974e6e5fb9fb314e17c7e8968c682726179e3c37c720",
+      "0xcd8d412e29733f40635587df0782682943846b063873c290726c71dfad31525e"
+    ],
+    "selected_indices": [
+      0,
+      5,
+      9
+    ],
+    "setup_transaction_count": 2
+  }
+]

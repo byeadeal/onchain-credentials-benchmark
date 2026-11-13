@@ -1,0 +1,62 @@
+{
+  "checkedAt": "2026-11-13 07:30:36 UTC",
+  "status": "PASS",
+  "baselineCommit": "64c48705cdeacc904d53bec1f9c88246d11cea9c",
+  "branch": "adil-work",
+  "preexistingFilesChecked": 142,
+  "preexistingFilesPreserved": 140,
+  "modifiedExistingFiles": [
+    "docs/adil/PROJECT_CONTEXT.md",
+    "docs/adil/WORKLOG.md"
+  ],
+  "deletedFiles": [],
+  "newPackageFiles": [
+    "docs/adil/DAY1_HANDOFF_2026-11-13.md",
+    "docs/adil/evidence/verification-2026-11-13/development-checks.json",
+    "docs/adil/evidence/verification-2026-11-13/final-review.json",
+    "docs/adil/evidence/verification-2026-11-13/full-command.json",
+    "docs/adil/evidence/verification-2026-11-13/full-command.txt",
+    "docs/adil/evidence/verification-2026-11-13/full/correctness-checks.json",
+    "docs/adil/evidence/verification-2026-11-13/full/fixtures.json",
+    "docs/adil/evidence/verification-2026-11-13/full/measurements.json",
+    "docs/adil/evidence/verification-2026-11-13/full/metadata.json",
+    "docs/adil/evidence/verification-2026-11-13/full/transactions.jsonl",
+    "docs/adil/evidence/verification-2026-11-13/full/verification-detailed.csv",
+    "docs/adil/evidence/verification-2026-11-13/full/verification-estimates.csv",
+    "docs/adil/evidence/verification-2026-11-13/original-tests.txt",
+    "docs/adil/evidence/verification-2026-11-13/pilot-command.json",
+    "docs/adil/evidence/verification-2026-11-13/pilot-command.txt",
+    "docs/adil/evidence/verification-2026-11-13/pilot/correctness-checks.json",
+    "docs/adil/evidence/verification-2026-11-13/pilot/fixtures.json",
+    "docs/adil/evidence/verification-2026-11-13/pilot/measurements.json",
+    "docs/adil/evidence/verification-2026-11-13/pilot/metadata.json",
+    "docs/adil/evidence/verification-2026-11-13/pilot/transactions.jsonl",
+    "docs/adil/evidence/verification-2026-11-13/pilot/verification-detailed.csv",
+    "docs/adil/evidence/verification-2026-11-13/pilot/verification-estimates.csv",
+    "docs/adil/evidence/verification-2026-11-13/remote-status.json",
+    "docs/adil/evidence/verification-2026-11-13/typecheck.txt",
+    "docs/adil/evidence/verification-2026-11-13/validate-full.txt",
+    "docs/adil/evidence/verification-2026-11-13/validate-pilot.txt",
+    "docs/adil/evidence/verification-2026-11-13/validation-commands.json",
+    "docs/adil/evidence/verification-2026-11-13/verification-tests.txt",
+    "experiments/adil/.gitattributes",
+    "experiments/adil/.gitignore",
+    "experiments/adil/hardhat.config.ts",
+    "experiments/adil/run-verification.ts",
+    "experiments/adil/test/verification.ts",
+    "experiments/adil/tsconfig.json",
+    "experiments/adil/validate-run.ts",
+    "experiments/adil/verification.ts",
+    "results/verification.csv"
+  ],
+  "excluded": [
+    ".git",
+    "node_modules",
+    "experiments/adil/.generated"
+  ],
+  "notes": [
+    "No shared contract, script, dependency, configuration, earlier evidence or teammate file was modified.",
+    "Team-compatible CSV contains genuine index-0 estimates; detailed evidence retains all 60 actual receipt samples.",
+    "One scoped commit/push is authorized by the attached instructions; no merge or automatic PR."
+  ]
+}
