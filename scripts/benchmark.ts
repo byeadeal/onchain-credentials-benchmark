@@ -98,6 +98,9 @@ async function measureRevocation(): Promise<Row[]> {
 
 function toCsv(rows: Row[]): string {
   const recordedAt = new Date().toISOString();
+  // Every gas figure is receipt gasUsed. deploy and issue are separate rows.
+  // gas_per_credential is floor(total_gas / cohort_size) for issue only, blank for deploy.
+  // That quotient is not eth_estimateGas, and deploy gas is not added to the issue total.
   const header = [
     "recorded_at",
     "network",
@@ -176,7 +179,10 @@ async function main() {
   }
   console.log("");
   console.log(`wrote ${output}`);
-  console.log("verification and revocation rows are not measured yet");
+  console.log(
+    "deploy and issue total_gas are receipt gasUsed; gas_per_credential is floor(total_gas / cohort_size) for issue rows only",
+  );
+  console.log("deploy gas is not included in issue totals; verification and revocation are not measured here");
 }
 
 main().catch((error: unknown) => {
