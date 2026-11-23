@@ -23,7 +23,7 @@ type ResultRow = {
 
 // Same deterministic student addresses as the issuance benchmark.
 function studentAddress(index: number): string {
-return ethers.getAddress(ethers.dataSlice(ethers.id("student-" + index),
+  return ethers.getAddress(ethers.dataSlice(ethers.id("student-" + index), 
 12));
 }
 
