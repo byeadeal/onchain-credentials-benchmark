@@ -21,6 +21,7 @@ contract MerkleCredentialAnchor {
 
     error NotIssuer();
     error AlreadyRevoked();
+    error BatchExists();
 
     modifier onlyIssuer() {
         if (msg.sender != issuer) revert NotIssuer();
@@ -32,6 +33,7 @@ contract MerkleCredentialAnchor {
     }
 
     function anchor(uint256 batchId, bytes32 root) external onlyIssuer {
+        if (batches[batchId].exists) revert BatchExists();
         batches[batchId] = Batch({root: root, anchoredAt: uint64(block.timestamp), exists: true});
         emit Anchored(batchId, root);
     }
@@ -41,7 +43,7 @@ contract MerkleCredentialAnchor {
     function verify(uint256 batchId, bytes32 leaf, bytes32[] calldata proof) external view returns (bool) {
         Batch storage batch = batches[batchId];
         if (!batch.exists || revoked[leaf]) return false;
-        return MerkleProof.verifyCalldata(proof, batch.root, leaf);
+        return MerkleProof.verifyCalldata(proof, batch.root, keccak256(bytes.concat(leaf)));
     }
 
     // Membership is not checked here. verify() is what enforces the root.

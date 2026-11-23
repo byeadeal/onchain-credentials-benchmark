@@ -11,7 +11,7 @@ export function merkleTree(leaves: string[]): { root: string; proofs: string[][]
     throw new Error("merkle tree needs at least one leaf");
   }
 
-  const layers: string[][] = [leaves.slice()];
+  const layers: string[][] = [leaves.map((leaf) => keccak256(solidityPacked(["bytes32"], [leaf])))];
   while (layers[layers.length - 1].length > 1) {
     const current = layers[layers.length - 1];
     const next: string[] = [];

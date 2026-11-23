@@ -8,7 +8,7 @@ The paper finds that published measurements cover these designs separately or in
 
 1. **HashRegistry.** One storage record per credential hash. `issue`, `verify`, and `revoke` are direct map updates. Revocation keeps the slot and flips the status.
 2. **SoulboundCredential.** An ERC-721 credential minted to the student. Transfers and approvals revert, and the token is marked locked (in the spirit of ERC-4973, ERC-5192, and ERC-5484, not a full implementation of those standards). Revocation burns the token.
-3. **MerkleCredentialAnchor.** The cohort is hashed off-chain into a sorted-pair Merkle tree. The contract stores one root per batch, checks an inclusion proof, and revokes individual leaves with a flag.
+3. **MerkleCredentialAnchor.** The cohort is hashed off-chain into a sorted-pair Merkle tree. Leaves are hashed once more before they enter the tree. The contract stores one root per batch and refuses to replace it. Revocation is one flag per leaf, shared by every batch.
 
 All three use the same credential payload (`NU-BSc-2026`, cohort size, index), so the comparison is about the architecture.
 
@@ -21,7 +21,7 @@ scripts/      issuance benchmark, results plot, and the shared leaf / Merkle hel
 results/      issuance.csv, figures/, and optional verification or revocation CSVs
 ```
 
-Solidity is pinned to **0.8.28** with the optimizer on (200 runs) and the Cancun EVM. Those settings live in `scripts/lib/settings.ts` and are what `hardhat.config.ts` compiles with.
+Solidity is pinned to **0.8.28** with the optimizer on (200 runs) and the Cancun EVM. The Hardhat network hardfork is also Cancun. Those settings live in `scripts/lib/settings.ts` and `hardhat.config.ts`.
 
 ## Requirements
 

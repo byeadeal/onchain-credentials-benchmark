@@ -38,4 +38,24 @@ describe("MerkleCredentialAnchor", function () {
     expect(await anchor.verify(1n, leaf, proofs[0])).to.equal(false);
     await expect(anchor.revoke(leaf)).to.be.revertedWithCustomError(anchor, "AlreadyRevoked");
   });
+
+  it("does not replace an existing batch root", async function () {
+    const { anchor } = await deploy();
+    const leaf = credentialHash(1, 0);
+    const { root } = merkleTree([leaf]);
+
+    await anchor.anchor(1n, root);
+    await expect(anchor.anchor(1n, root)).to.be.revertedWithCustomError(anchor, "BatchExists");
+  });
+
+  it("hashes the leaf before checking the proof", async function () {
+    const { anchor } = await deploy();
+    const leaf = credentialHash(1, 0);
+    const { root, proofs } = merkleTree([leaf]);
+    const hashed = ethers.keccak256(ethers.solidityPacked(["bytes32"], [leaf]));
+
+    await anchor.anchor(4n, root);
+    expect(await anchor.verify(4n, leaf, proofs[0])).to.equal(true);
+    expect(await anchor.verify(4n, hashed, proofs[0])).to.equal(false);
+  });
 });

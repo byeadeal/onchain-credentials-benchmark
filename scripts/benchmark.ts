@@ -30,7 +30,7 @@ function cohortSizes(): number[] {
 }
 
 function studentAddress(index: number): string {
-  return ethers.getAddress(ethers.toBeHex(index + 1, 20));
+  return ethers.getAddress(ethers.dataSlice(ethers.id("student-" + index), 12));
 }
 
 async function spentGas(pending: Promise<ContractTransactionResponse>): Promise<bigint> {

@@ -10,7 +10,6 @@ contract SoulboundCredential is ERC721 {
     uint256 private _nextId;
 
     mapping(uint256 tokenId => bytes32) public credentialHash;
-    mapping(uint256 tokenId => bool) public locked;
 
     event Locked(uint256 indexed tokenId);
     event Revoked(uint256 indexed tokenId);
@@ -31,18 +30,20 @@ contract SoulboundCredential is ERC721 {
         tokenId = ++_nextId;
         _safeMint(student, tokenId);
         credentialHash[tokenId] = hash;
-        locked[tokenId] = true;
         emit Locked(tokenId);
     }
 
+    function locked(uint256 tokenId) public view returns (bool) {
+        return _ownerOf(tokenId) != address(0);
+    }
+
     function verify(uint256 tokenId) external view returns (bool) {
-        return _ownerOf(tokenId) != address(0) && locked[tokenId];
+        return locked(tokenId);
     }
 
     function revoke(uint256 tokenId) external onlyIssuer {
         _burn(tokenId);
         delete credentialHash[tokenId];
-        delete locked[tokenId];
         emit Revoked(tokenId);
     }
 
