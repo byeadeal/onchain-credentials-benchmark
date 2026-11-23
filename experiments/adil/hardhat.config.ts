@@ -5,7 +5,7 @@ import shared from "../../hardhat.config";
 // Read shared compiler settings; isolate generated files and test discovery.
 const config: HardhatUserConfig = {
   ...shared,
-  networks: { hardhat: { hardfork: "osaka", chainId: 31337 } },
+  networks: { hardhat: { hardfork: "cancun", chainId: 31337 } },
   paths: {
     root: path.resolve(__dirname, "../.."),
     sources: path.resolve(__dirname, "../../contracts"),

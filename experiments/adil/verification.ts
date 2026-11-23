@@ -61,7 +61,7 @@ export async function createFixture(architecture: Architecture, size: number): P
   } else if (architecture === "soulbound") {
     // Preserve the existing issuance fixture convention; minting is setup only.
     for (let i = 0; i < size; i++) {
-      await mined(contract.mint(ethers.getAddress(ethers.toBeHex(i + 1, 20)), hashes[i]));
+      await mined(contract.mint(ethers.getAddress(ethers.dataSlice(ethers.id("student-" + i), 12)), hashes[i]));
     }
   } else {
     ({ root, proofs } = merkleTree(hashes));
@@ -202,7 +202,7 @@ export function validateMeasurements(rows: Measurement[], sizes: number[]): void
     assert.equal(r.measurement_type, "paired_separate_columns");
     assert.equal(r.receipt_measurement, "receipt.gasUsed"); assert.equal(r.estimate_measurement, "eth_estimateGas");
     assert.equal(r.receipt_status, 1); assert.equal(r.transaction_count, 1);
-    assert.equal(r.network, "hardhat"); assert.equal(r.chain_id, 31337); assert.equal(r.runtime_hardfork, "osaka");
+    assert.equal(r.network, "hardhat"); assert.equal(r.chain_id, 31337); assert.equal(r.runtime_hardfork, "cancun");
     assert.equal(r.compiler, "0.8.28"); assert.equal(r.optimizer_runs, 200); assert.equal(r.evm_target, "cancun");
     assert(/^0x[0-9a-fA-F]{64}$/.test(r.tx_hash)); assert(r.post_block_number > r.pre_block_number);
     assert.equal(r.calldata_bytes, r.calldata_zero_bytes + r.calldata_nonzero_bytes);

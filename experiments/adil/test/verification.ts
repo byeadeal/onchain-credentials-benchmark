@@ -13,7 +13,7 @@ describe("Adil verification measurements", function () {
   const rows: Measurement[] = [];
   const raw: RawRecord[] = [];
   const provenance: Provenance = { runId: "test", sourceCommit: "0".repeat(40), network: "hardhat",
-    chainId: 31337, runtimeHardfork: "osaka", compiler: "0.8.28", optimizerRuns: 200, evmTarget: "cancun" };
+    chainId: 31337, runtimeHardfork: "cancun", compiler: "0.8.28", optimizerRuns: 200, evmTarget: "cancun" };
 
   before(async function () {
     for (const architecture of ARCHITECTURES) {

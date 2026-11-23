@@ -17,7 +17,7 @@ const sha256 = (contents: string | Buffer): string => crypto.createHash("sha256"
 async function main(): Promise<void> {
   assert.equal(hre.network.name, "hardhat", "remote networks are not allowed");
   const runtime = hre.network.config as { chainId: number; hardfork: string; forking?: unknown };
-  assert.equal(runtime.chainId, 31337); assert.equal(runtime.hardfork, "osaka");
+  assert.equal(runtime.chainId, 31337); assert.equal(runtime.hardfork, "cancun");
   assert(!runtime.forking, "forking is not allowed");
   const sizes = parseSizes(process.env.ADIL_COHORT_SIZES);
   const evidenceBase = path.join(repo, "docs/adil/evidence");
@@ -68,7 +68,7 @@ async function main(): Promise<void> {
     teammate_refs: { alikhan_results: git("rev-parse", "origin/alikhan/results"), azhar_revocation: git("rev-parse", "origin/azhar/revocation"), main: git("rev-parse", "origin/main") },
     scientific_limits: ["Native validity functions have different semantics; soulbound checks token existence/lock, not supplied hash or identity.",
       "Local one-run synthetic data, deterministic selected positions, no statistical generalization.",
-      "Compiler Cancun and execution Osaka are distinct. Node 26 is outside installed Hardhat's declared support range if still used.",
+      "Compiler target and execution are both Cancun. Check the recorded Node version against installed Hardhat's declared support ranges.",
       "Gas estimation and mined receipt gas are different measurements, even if numerically equal.",
       "No issuance, revocation-cost, proof-generation cost, RPC fee, DA or storage-growth measurement is claimed."] };
   const saveMetadata = (): void => fs.writeFileSync(path.join(output, "metadata.json"), JSON.stringify(metadata, null, 2) + "\n");
