@@ -23,9 +23,8 @@ type ResultRow = {
 
 // Same deterministic student addresses as the issuance benchmark.
 function studentAddress(index: number): string {
-  return ethers.getAddress(
-    ethers.toBeHex(index + 1, 20)
-  );
+return ethers.getAddress(ethers.dataSlice(ethers.id("student-" + index),
+12));
 }
 
 // Read the actual gas used from a mined transaction receipt.
