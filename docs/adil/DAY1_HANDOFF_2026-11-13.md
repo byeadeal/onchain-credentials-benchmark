@@ -1,11 +1,13 @@
 # Adil Day 1 handoff - 2026-11-13
 
+> Historical Osaka run. Its commands require the earlier source revision. For current Cancun results, see [verification results](../../results/verification.csv) and [environment](../../results/environment.txt).
+
 **Status: verification implementation and experiments COMPLETE.** Commit/push are authorized for this package; the final Git log/remote refs establish publication status. Assignment: Adil owns verification/methodology; Alikhan owns issuance/results/plotting; Azhar owns revocation. No teammate implementation, shared contract, dependency, shared configuration, or original benchmark was edited or merged.
 
 ## A. Completed contribution
 
 - Isolated local benchmark: [runner](../../experiments/adil/run-verification.ts), [measurement/validation helpers](../../experiments/adil/verification.ts), [saved-run validator](../../experiments/adil/validate-run.ts), [tests](../../experiments/adil/test/verification.ts), [Hardhat config](../../experiments/adil/hardhat.config.ts), [TypeScript config](../../experiments/adil/tsconfig.json), [local ignore rules](../../experiments/adil/.gitignore), and [LF rules](../../experiments/adil/.gitattributes).
-- Team output: [results/verification.csv](../../results/verification.csv), exactly **24 estimate-only rows** with columns `architecture,cohort_size,scenario,gas`.
+- Team output: [archived verification CSV](../../results/archive/verification-osaka.csv), exactly **24 estimate-only rows** with columns `architecture,cohort_size,scenario,gas`.
 - Actual mined receipt data: [full/verification-detailed.csv](./evidence/verification-2026-11-13/full/verification-detailed.csv), **60 samples**, with separate `receipt_gas` and `gas_estimate` columns, static-call booleans, proof lengths, calldata byte counts, transaction hashes, runtime and source provenance.
 - [Raw transactions/receipts](./evidence/verification-2026-11-13/full/transactions.jsonl), [fixtures](./evidence/verification-2026-11-13/full/fixtures.json), [structured measurements](./evidence/verification-2026-11-13/full/measurements.json), [correctness checks](./evidence/verification-2026-11-13/full/correctness-checks.json) and [environment/source hashes](./evidence/verification-2026-11-13/full/metadata.json) are retained. The [pilot](./evidence/verification-2026-11-13/pilot/) is separate immutable evidence.
 - Updated [PROJECT_CONTEXT.md](./PROJECT_CONTEXT.md) and [WORKLOG.md](./WORKLOG.md). Earlier issuance evidence and the large-grid design document remain historical records; the current task explicitly supersedes that proposed grid and ownership allocation.
