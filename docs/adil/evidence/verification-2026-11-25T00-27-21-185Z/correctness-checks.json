@@ -1,0 +1,126 @@
+[
+  {
+    "kind": "revoked",
+    "architecture": "hash_registry",
+    "cohort_size": 1,
+    "sample_index": 0,
+    "expected": false,
+    "observed": false
+  },
+  {
+    "kind": "revoked",
+    "architecture": "soulbound",
+    "cohort_size": 1,
+    "sample_index": 0,
+    "expected": false,
+    "observed": false
+  },
+  {
+    "kind": "corrupt_proof",
+    "cohort_size": 1,
+    "proof_length": 1,
+    "mutation": "append_sibling_to_empty_proof",
+    "observed": false
+  },
+  {
+    "kind": "revoked",
+    "architecture": "merkle_anchor",
+    "cohort_size": 1,
+    "sample_index": 0,
+    "expected": false,
+    "observed": false
+  },
+  {
+    "kind": "revoked",
+    "architecture": "hash_registry",
+    "cohort_size": 10,
+    "sample_index": 0,
+    "expected": false,
+    "observed": false
+  },
+  {
+    "kind": "revoked",
+    "architecture": "soulbound",
+    "cohort_size": 10,
+    "sample_index": 0,
+    "expected": false,
+    "observed": false
+  },
+  {
+    "kind": "corrupt_proof",
+    "cohort_size": 10,
+    "proof_length": 4,
+    "mutation": "flip_first_sibling_bit_same_length",
+    "observed": false
+  },
+  {
+    "kind": "revoked",
+    "architecture": "merkle_anchor",
+    "cohort_size": 10,
+    "sample_index": 0,
+    "expected": false,
+    "observed": false
+  },
+  {
+    "kind": "revoked",
+    "architecture": "hash_registry",
+    "cohort_size": 100,
+    "sample_index": 0,
+    "expected": false,
+    "observed": false
+  },
+  {
+    "kind": "revoked",
+    "architecture": "soulbound",
+    "cohort_size": 100,
+    "sample_index": 0,
+    "expected": false,
+    "observed": false
+  },
+  {
+    "kind": "corrupt_proof",
+    "cohort_size": 100,
+    "proof_length": 7,
+    "mutation": "flip_first_sibling_bit_same_length",
+    "observed": false
+  },
+  {
+    "kind": "revoked",
+    "architecture": "merkle_anchor",
+    "cohort_size": 100,
+    "sample_index": 0,
+    "expected": false,
+    "observed": false
+  },
+  {
+    "kind": "revoked",
+    "architecture": "hash_registry",
+    "cohort_size": 1000,
+    "sample_index": 0,
+    "expected": false,
+    "observed": false
+  },
+  {
+    "kind": "revoked",
+    "architecture": "soulbound",
+    "cohort_size": 1000,
+    "sample_index": 0,
+    "expected": false,
+    "observed": false
+  },
+  {
+    "kind": "corrupt_proof",
+    "cohort_size": 1000,
+    "proof_length": 10,
+    "mutation": "flip_first_sibling_bit_same_length",
+    "observed": false
+  },
+  {
+    "kind": "revoked",
+    "architecture": "merkle_anchor",
+    "cohort_size": 1000,
+    "sample_index": 0,
+    "expected": false,
+    "observed": false
+  }
+]

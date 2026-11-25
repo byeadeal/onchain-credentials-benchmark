@@ -1,0 +1,8 @@
+recorded_at_utc: 2026-11-25T00:28:13Z
+runner: Windows X64 (windows-latest)
+node: v22.23.5
+npm: 10.9.9
+hardhat: 2.29.1
+execution_hardfork: cancun
+source_commit: d5a580742600e8325294ab6210f57dbdd0c79862
+run: https://github.com/byeadeal/onchain-credentials-benchmark/actions/runs/45517971939

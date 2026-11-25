@@ -1,0 +1,99 @@
+{
+  "schema_version": "adil-verification-day1-v1",
+  "status": "complete",
+  "started_at_utc": "2026-11-25T00:27:21.188Z",
+  "runId": "verification-2026-11-25T00-27-21-185Z",
+  "sourceCommit": "d5a580742600e8325294ab6210f57dbdd0c79862",
+  "network": "hardhat",
+  "chainId": 31337,
+  "runtimeHardfork": "cancun",
+  "compiler": "0.8.28",
+  "optimizerRuns": 200,
+  "evmTarget": "cancun",
+  "branch": "adil-work",
+  "initial_git_status": "R  results/issuance.csv -> results/archive/issuance-osaka.csv\nR  results/revocation.csv -> results/archive/revocation-osaka.csv\nR  results/verification.csv -> results/archive/verification-osaka.csv",
+  "cohort_sizes": [
+    1,
+    10,
+    100,
+    1000
+  ],
+  "selection": "deduplicated [0, floor(N/2), N-1]; compatibility uses index 0 only",
+  "repetitions": 1,
+  "seed": "none; original credentialHash(N,index) convention",
+  "setup_excluded": true,
+  "command": "node_modules\\.bin\\hardhat.cmd --config experiments/adil/hardhat.config.ts --network hardhat run experiments/adil/run-verification.ts",
+  "environment": {
+    "ADIL_COHORT_SIZES": null,
+    "ADIL_OUTPUT_DIR": null,
+    "ADIL_PUBLISH_TEAM_CSV": "1",
+    "node": "v22.23.5",
+    "npm": "10.9.9",
+    "versions": {
+      "hardhat": "2.29.1",
+      "ethers": "6.17.0",
+      "@openzeppelin/contracts": "5.6.1",
+      "typescript": "5.9.3",
+      "ts-node": "10.9.2",
+      "@nomicfoundation/hardhat-toolbox": "6.1.2"
+    },
+    "hardhat_declared_node_support": [
+      "^20.0.0",
+      "^22.0.0",
+      "^24.0.0"
+    ]
+  },
+  "runtime": {
+    "hardfork": "cancun",
+    "chain_id": 31337,
+    "client": "HardhatNetwork/2.29.1/@nomicfoundation/edr/0.3.8",
+    "compiler": "0.8.28",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "evm_target": "cancun"
+  },
+  "source_sha256": {
+    "contracts/HashRegistry.sol": "3e52f9b239b8ae5531ca1915da13b0592d0086bac376f790f1911e4d055998cc",
+    "contracts/SoulboundCredential.sol": "06e844e1561a62a9e0fba066148d7689cdff6d13f3830b40f9fba2f2dff37282",
+    "contracts/MerkleCredentialAnchor.sol": "4e295a968e8b9b3ca949c77c4ec1d4b299c66ef1fa280f70f7b21f44fa67b778",
+    "scripts/lib/leaves.ts": "18d3f7bcb71ed6030e4b9fd43f1c6be58270038b6ae4541d0ba999dfeef21cd0",
+    "scripts/lib/merkle.ts": "77e431aebdcc95349802cab3f3edd7a6ebc2028b5173de3d37031c47a1fa1897",
+    "scripts/lib/settings.ts": "3c9baefff34301b3b41097e728e6f9dd9c753df9cb10638721de3e1c2c37f66a",
+    "hardhat.config.ts": "b6b9b73553f626144e84f79e5afe19837a492e7e62b41fd6b6dc77e41a02ea6d",
+    "package.json": "4c464bddc1ff499eadb37fab75209af62106b8b40e54c5db516c4f299499347f",
+    "package-lock.json": "dbe52ebc197cfeb9500fb31c827b0a6a2d190b7470e3ca4ef2483cccf45befbd",
+    "experiments/adil/hardhat.config.ts": "699d64080e5bee4d3abdd3c017b37a721074966dde9bee1b1323694fb4c4f378",
+    "experiments/adil/run-verification.ts": "d825c7422cbd252e71f80f43523b4a6b1f229ca061e8f5a7972fa0758e515538",
+    "experiments/adil/tsconfig.json": "4f199918e848dc9a1c4d3975c85c37cf81150caab17d3f36e7b5bc5b2aef1654",
+    "experiments/adil/validate-run.ts": "eed7273dac274321570c122b42c4b387b3d4dd234b71b0e05d83a52a407f86d8",
+    "experiments/adil/verification.ts": "126ac9f3d990cdf6e2e53dde45ba025a83f41bca5a63359248b30de37e2ffcd7",
+    "experiments/adil/test/verification.ts": "efc2aa2fbcbd8b0a642fb98e29d7ac8af8a45bfe5b9fda207a3fefd426b7b535"
+  },
+  "teammate_refs": {
+    "alikhan_results": "2989f50748f64b88d8ea978d96d1a9b425f46d47",
+    "azhar_revocation": "2ebb305bed4bee2fef31f327da7d2facb5f8c08d",
+    "main": "e758e0ab79f97fbd1dc696e618e113f8030af510"
+  },
+  "scientific_limits": [
+    "Native validity functions have different semantics; soulbound checks token existence/lock, not supplied hash or identity.",
+    "Local one-run synthetic data, deterministic selected positions, no statistical generalization.",
+    "Compiler target and execution are both Cancun. Check the recorded Node version against installed Hardhat's declared support ranges.",
+    "Gas estimation and mined receipt gas are different measurements, even if numerically equal.",
+    "No issuance, revocation-cost, proof-generation cost, RPC fee, DA or storage-growth measurement is claimed."
+  ],
+  "finished_at_utc": "2026-11-25T00:27:33.740Z",
+  "sample_rows": 60,
+  "compatibility_rows": 24,
+  "correctness_checks": 16,
+  "team_csv_published": true,
+  "artifact_sha256": {
+    "correctness-checks.json": "d517c390efd7e5920175b92812b0f19fdd6bae1eb1b37b120581daf5e68ef0c3",
+    "fixtures.json": "6428c96ea03ab9da1f62710b3a35b9338157dce37cf6718978f76f16d90bb1f4",
+    "measurements.json": "ca5b9686ab15c8604446855d5fd56feb86d7a6e7dd9152ce3c32ac182f4d8907",
+    "transactions.jsonl": "1e81058f2c54754c26860f160093bdacdd6773b7355ab17b9285e96a053e7b6c",
+    "verification-detailed.csv": "4dd0e223449ddeae7930153c369021bce51f52fd37435eac550463c47362c85c",
+    "verification-estimates.csv": "4598f1eec3962357bc5ed085342d1f03cfe9619f4412805e9053afb1ea5cf658"
+  }
+}
