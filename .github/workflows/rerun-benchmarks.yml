@@ -1,0 +1,127 @@
+# Reruns every test and all three gas benchmarks on one GitHub machine,
+# then commits the new CSVs, figure and evidence back to the adil-work branch.
+# Start it from the Actions tab: "Rerun benchmarks" -> Run workflow -> branch: adil-work.
+name: Rerun benchmarks
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rerun:
+    # Windows, because Adil's verification runner calls cmd.exe.
+    runs-on: windows-latest
+    timeout-minutes: 60
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Keep line endings unchanged
+        # CRLF in .sol files would change compiled bytecode and deployment gas.
+        run: git config --global core.autocrlf false
+
+      - name: Only run on adil-work
+        if: github.ref_name != 'adil-work'
+        run: |
+          echo "Start this workflow on the adil-work branch."
+          exit 1
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # Adil's runner reads origin/main and the teammate branches
+
+      - name: Put the checkout on the adil-work branch
+        run: git checkout -B adil-work
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: npm ci
+
+      - name: Check the network is pinned to Cancun
+        run: |
+          grep -q 'hardfork: "cancun"' hardhat.config.ts
+          grep -q 'hardfork: "cancun"' experiments/adil/hardhat.config.ts
+
+      - name: Contract tests (expect 11 passing)
+        run: npx hardhat test
+
+      - name: Verification tests (expect 11 passing)
+        run: npx hardhat --config experiments/adil/hardhat.config.ts test
+
+      - name: Archive the earlier CSVs
+        # First run: move the old Osaka CSVs into results/archive.
+        # Later runs: the archive already exists, so drop the previous rerun's CSV.
+        run: |
+          mkdir -p results/archive
+          for f in issuance revocation verification; do
+            if [ -f "results/$f.csv" ]; then
+              if [ -f "results/archive/$f-osaka.csv" ]; then
+                git rm -q -f --cached "results/$f.csv" || true
+                rm -f "results/$f.csv"
+              else
+                git mv "results/$f.csv" "results/archive/$f-osaka.csv"
+              fi
+            fi
+          done
+
+      - name: Issuance benchmark (Alikhan)
+        run: npx hardhat run scripts/benchmark.ts
+
+      - name: Revocation benchmark (Azhar)
+        run: npx hardhat run scripts/benchmarkRevocation.ts
+
+      - name: Verification benchmark (Adil)
+        env:
+          ADIL_PUBLISH_TEAM_CSV: "1"
+        run: npx hardhat --config experiments/adil/hardhat.config.ts run experiments/adil/run-verification.ts
+
+      - name: Redraw the figure
+        run: |
+          python -m pip install -r requirements-plot.txt
+          python scripts/test_plot_results.py
+          python scripts/plot_results.py \
+            --issuance results/issuance.csv \
+            --verification results/verification.csv \
+            --revocation results/revocation.csv \
+            --output results/figures/gas_vs_cohort.png
+
+      - name: Record the environment
+        run: |
+          {
+            echo "recorded_at_utc: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            echo "runner: ${{ runner.os }} ${{ runner.arch }} (windows-latest)"
+            echo "node: $(node -v)"
+            echo "npm: $(npm -v)"
+            echo "hardhat: $(npx hardhat --version)"
+            echo "execution_hardfork: cancun"
+            echo "source_commit: ${{ github.sha }}"
+            echo "run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          } > results/environment.txt
+          cat results/environment.txt
+
+      - name: Keep a downloadable copy
+        uses: actions/upload-artifact@v4
+        with:
+          name: benchmark-results
+          path: |
+            results/
+            docs/adil/evidence/
+
+      - name: Commit the results to adil-work
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f results/issuance.csv results/revocation.csv results/verification.csv results/environment.txt
+          git add -A results/archive results/figures docs/adil/evidence
+          git commit -m "Rerun all benchmarks on GitHub Actions (Node 22, Cancun)"
+          git push origin HEAD:adil-work
