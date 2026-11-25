@@ -3,6 +3,11 @@ import "@nomicfoundation/hardhat-toolbox";
 import { COMPILER_VERSION, EVM_VERSION, OPTIMIZER_RUNS } from "./scripts/lib/settings";
 
 const config: HardhatUserConfig = {
+  networks: {
+    hardhat: {
+      hardfork: "cancun",
+    },
+  },
   solidity: {
     version: COMPILER_VERSION,
     settings: {
